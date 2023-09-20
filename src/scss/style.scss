@@ -290,6 +290,13 @@ ul {
             margin-left: auto;
         }
 
+        &__tel {
+            font-size: 13px;
+            span{
+                color: #337D5A;
+            }
+        }
+
         &__content {
             padding-bottom: 10px;
         }
@@ -486,6 +493,18 @@ ul {
             align-content: center;
             flex-wrap: wrap;
             margin-left: auto;
+
+            .inst {
+                margin-top: 1px;
+            }
+        
+            .facebook:hover,
+            .inst:hover,
+            .youtube:hover {
+                path {
+                    fill: #93B474;
+                }
+            }
         }
     }
 }
@@ -1218,7 +1237,7 @@ ul {
     }
 
     .first-line__personal-discount {
-        width: 760px;
+        margin-left: 290px;
     }
 
     .second-line__phones {
@@ -1270,15 +1289,17 @@ ul {
         margin-right: 150px;
     }
 
-    .about-benefits__nuts {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nut {
-        margin-bottom: 30px;
-        margin-right: auto;
-        margin-left: auto;
+    .about-benefits{
+        &__nuts {
+            flex-wrap: wrap;
+            justify-content: center;
+            .nut {
+                margin-bottom: 30px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    
     }
 }
 
@@ -1343,19 +1364,21 @@ ul {
 }
 
 @media (max-width:800px) {
-    .statistics__content {
-        flex-direction: column;
-    }
-
-    .stat-1,
-    .stat-2,
-    .stat-3,
-    .stat-4 {
-        margin: 0 auto;
-    }
-
-    .about-benefits__info {
-        width: 450px;
+    .statistics{
+        &__content {
+            flex-direction: column;
+        }
+    
+        .stat-1,
+        .stat-2,
+        .stat-3,
+        .stat-4 {
+            margin: 0 auto;
+        }
+    
+        .about-benefits__info {
+            width: 450px;
+        }
     }
 }
 
@@ -1381,73 +1404,73 @@ ul {
         font-size: 15px;
     }
 
-    .about-benefits__info {
-        width: 335px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .nut__pic,
-    .nut__overlay-bg {
-        width: 320px;
-    }
-
-    .nut__image {
-        top: 140px;
-    }
-
-    .nut__name {
-        font-size: 35px;
-        top: 190px;
-    }
-
-    .nut__image-overlay {
-        top: 35px;
-        padding-left: 0;
-    }
-
-    .nut__name-overlay {
-        font-size: 35px;
-        top: 85px;
-    }
-
-    .nut__about-1 {
-        top: 160px;
-        width: 304px;
-    }
-
-    .nut__about-1,
-    .nut__about-2 {
-        font-size: 16px;
-    }
-
-    .nut__about-2 {
-        top: 285px;
+    .about-benefits{
+        &__info {
+            width: 335px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .nut__pic,
+        .nut__overlay-bg {
+            width: 320px;
+        }
+    
+        .nut__image {
+            top: 140px;
+        }
+    
+        .nut__name {
+            font-size: 35px;
+            top: 190px;
+        }
+    
+        .nut__image-overlay {
+            top: 35px;
+            padding-left: 0;
+        }
+    
+        .nut__name-overlay {
+            font-size: 35px;
+            top: 85px;
+        }
+    
+        .nut__about-1 {
+            top: 160px;
+            width: 304px;
+        }
+    
+        .nut__about-1,
+        .nut__about-2 {
+            font-size: 16px;
+        }
+    
+        .nut__about-2 {
+            top: 285px;
+        }
     }
 }
 
 @media (max-width:450px) {
-    .product__weight-and-packaging {
-        width: 235px;
+    .productions {
+        .product {
+            width: 320px;
+            &__btn-buy {
+                left: 212px;
+                button {
+                    width: 90px;
+                }
+            }
+            &__arrows {
+                width: 310px;
+            }
+            &__weight-and-packaging {
+                width: 280px;
+            }
+            .zoom {
+                left: 128px;
+            }
+        }
     }
 
-    .product__btn-buy {
-        left: 212px;
-    }
-
-    .product {
-        width: 320px;
-    }
-
-    .product__btn-buy button {
-        width: 90px;
-    }
-
-    .product__arrows {
-        width: 280px;
-    }
-
-    .zoom {
-        left: 128px;
-    }
 }
