@@ -1301,6 +1301,10 @@ ul {
         }
     
     }
+
+    .productions__all {
+        padding: 0 80px;
+    }
 }
 
 @media (max-width:1024px) {
@@ -1355,6 +1359,7 @@ ul {
 
     .productions__all {
         padding: 0 0;
+        gap: 20px;
     }
 
     .product {
@@ -1363,7 +1368,7 @@ ul {
     }
 }
 
-@media (max-width:800px) {
+@media (max-width:900px) {
     .statistics{
         &__content {
             flex-direction: column;
@@ -1379,6 +1384,10 @@ ul {
         .about-benefits__info {
             width: 450px;
         }
+    }
+
+    .about-benefits__info{
+        max-width: 455px;
     }
 }
 

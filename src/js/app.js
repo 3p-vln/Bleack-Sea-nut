@@ -16,7 +16,6 @@ var swiper = new Swiper(".product-swiper", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    mousewheel: true,
     keyboard: true,
 });
 
@@ -26,6 +25,5 @@ var swiper = new Swiper(".block-2__swiper", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    mousewheel: true,
     keyboard: true,
 });
