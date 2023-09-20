@@ -19,3 +19,13 @@ var swiper = new Swiper(".product-swiper", {
     mousewheel: true,
     keyboard: true,
 });
+
+var swiper = new Swiper(".block-2__swiper", {
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    mousewheel: true,
+    keyboard: true,
+});

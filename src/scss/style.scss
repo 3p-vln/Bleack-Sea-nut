@@ -902,34 +902,36 @@ ul {
     }
 
     &__block-2 {
-        background-image: url("@img/main/about-the-manufacturer.jpg");
-        background-repeat: no-repeat;
         width: 700px;
         height: 472px;
-        background-size: cover;
-        background-position: bottom center;
         margin-top: 34px;
+        position: relative;
     }
 
     &__play {
-        margin-top: 212px;
-        margin-left: 323px;
+        position: absolute;
+        z-index: 5;
+        top: 212px;
+        left: 323px;
     }
 
     &__arrows {
+        position: absolute;
         width: 141px;
         height: 58px;
-        background: #337D5A;
-        margin-top: 137px;
+        background: #337d5a;
+        z-index: 5;
+        top: 415px;
+
 
         & .arrow__right,
         & .arrow__left {
-            margin-left: 25px;
-            margin-top: 18px;
+            position: absolute;
+            margin-left: 14px;
         }
 
         & .arrow__right {
-            margin-left: 40px;
+            margin-right: 14px;
         }
     }
 
@@ -1008,6 +1010,7 @@ ul {
     background-size: cover;
     background-position: bottom center;
     margin-top: 70px;
+
     &__content {
         font-family: Raleway;
         color: #FFF;
@@ -1015,6 +1018,7 @@ ul {
         flex-direction: column;
         align-content: center;
         flex-wrap: wrap;
+
         h1 {
             text-align: center;
             font-size: 45px;
@@ -1025,7 +1029,8 @@ ul {
             max-width: 1050px;
             margin-top: 243px;
             margin-bottom: 69px;
-        }  
+        }
+
         p {
             font-size: 24px;
             font-style: italic;
@@ -1034,16 +1039,17 @@ ul {
             letter-spacing: 0.24px;
             text-align: center;
             margin-top: 27px;
-        }      
+        }
     }
 }
 
-.about-benefits{
+.about-benefits {
     &__content {
         color: #1A2F3F;
         font-family: Raleway;
         margin-top: 82px;
     }
+
     &__title {
         font-size: 45px;
         font-style: normal;
@@ -1053,6 +1059,7 @@ ul {
         text-align: center;
         margin-bottom: 29px;
     }
+
     &__info {
         color: #1A2F3F;
         text-align: center;
@@ -1065,20 +1072,24 @@ ul {
         margin-left: auto;
         margin-right: auto;
     }
+
     &__nuts {
         display: flex;
         justify-content: space-between;
         margin-top: 64px;
+
         .nut {
             margin-right: 30px;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+
             &__image {
                 position: absolute;
                 top: 203px;
             }
+
             &__name {
                 color: #FFF;
                 font-size: 40px;
@@ -1089,6 +1100,7 @@ ul {
                 position: absolute;
                 top: 242px;
             }
+
             &__overlay {
                 display: flex;
                 flex-direction: column;
@@ -1098,11 +1110,13 @@ ul {
                 visibility: hidden;
                 transition: 0.55s opacity, 0.55s visibility;
             }
+
             &__image-overlay {
                 position: absolute;
                 top: 95px;
                 padding-left: 10px;
             }
+
             &__name-overlay {
                 color: #FFF;
                 font-size: 40px;
@@ -1113,6 +1127,7 @@ ul {
                 position: absolute;
                 top: 148px;
             }
+
             &__about-1,
             &__about-2 {
                 color: #FFF;
@@ -1124,23 +1139,26 @@ ul {
                 line-height: 23px;
                 letter-spacing: 0.18px;
             }
+
             &__about-1 {
                 position: absolute;
                 top: 230px;
                 width: 334px;
             }
+
             &__about-2 {
                 position: absolute;
                 top: 358px;
                 width: 302px;
                 line-height: 25px;
             }
+
             &:hover {
                 .nut__overlay {
                     opacity: 1;
                     visibility: visible;
                 }
-            
+
                 .nut__image,
                 .nut__name {
                     display: none;
@@ -1158,6 +1176,7 @@ ul {
     background-size: cover;
     background-position: bottom center;
     margin-top: 100px;
+
     &__content {
         color: #FFF;
         font-family: Raleway;
@@ -1166,6 +1185,7 @@ ul {
         align-content: center;
         flex-wrap: wrap;
         padding-top: 224px;
+
         h1 {
             font-size: 45px;
             font-style: normal;
@@ -1177,6 +1197,7 @@ ul {
             padding-right: 15px;
             margin-bottom: 0;
         }
+
         p {
             text-align: center;
             font-size: 22px;
