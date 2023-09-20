@@ -56,11 +56,12 @@ ul {
         display: flex;
         justify-content: center;
         margin-left: 455px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__login-and-registration {
         color: #323232;
-        margin-left: auto;
         font-size: 13px;
         font-weight: 500;
         display: flex;
@@ -1234,10 +1235,6 @@ ul {
 @media (max-width:1350px) {
     .container {
         max-width: 1000px;
-    }
-
-    .first-line__personal-discount {
-        margin-left: 290px;
     }
 
     .second-line__phones {
