@@ -47,8 +47,9 @@ var swiper = new Swiper(".block-2__swiper", {
     },
     keyboard: true,
 });
-
+//митьбю
 var swiper = new Swiper(".news__swiper", {
+    slidesPerView: 1,
     spaceBetween: 0,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -56,13 +57,30 @@ var swiper = new Swiper(".news__swiper", {
     },
     keyboard: true,
     breakpoints: {
-        1920:{
-            slidesPerView: 3,
-            spaceBetween: 30,
-        },
-        1350: {
-            slidesPerView: 2,
+        
+        650:{
+            slidesPerView: 1.4,
             spaceBetween: 50,
         },
+        1024:{
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1030:{
+            slidesPerView: 2.2,
+            spaceBetween: 70,
+        },
+        1040:{
+            slidesPerView: 2.2,
+            spaceBetween: 80,
+        },
+        1100: {
+            slidesPerView: 2.4,
+            spaceBetween: 10,
+        },
+        1400:{
+            slidesPerView: 3,
+            spaceBetween: 30,
+        }
     }
 });
