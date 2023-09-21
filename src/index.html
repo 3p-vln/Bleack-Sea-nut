@@ -17,53 +17,21 @@
                 <img src="@img/main/play-icon.svg">
             </div>
         </div>
+        <div class="play-block__video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
     </section>
 
     @@include('html/productions.html')
 
     @@include('html/about-the-manufacturer.html')
 
-    <section class="statistics">
-        <div class="container">
-            <div class="statistics__content">
-                <div class="statistic stat-1">
-                    <h1>240<span>Га</span></h1>
-                    <p>Cмешанных
-                        <br>садов
-                    </p>
-                </div>
-                <div class="statistic stat-2">
-                    <h1>1<span>Га</span></h1>
-                    <p>Тепличного
-                        <br>комплекса
-                    </p>
-                </div>
-                <div class="statistic stat-3">
-                    <h1>10<span>Га</span></h1>
-                    <p>Первая промышленная плантация
-                        <br>шиповника в Украине
-                    </p>
-                </div>
-                <div class="statistic stat-4">
-                    <h1>80<span>%</span></h1>
-                    <p>Приживаемости
-                        <br>саженцев
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('html/statistics.html')
 
-    <section class="play-block-2">
-        <div class="container">
-            <div class="play-block-2__content">
-                <h1>Наша главная цель - получить максимальную прибыль с одного гектара</h1>
-                <img src="@img/main/play-icon.svg">
-                <p>Cмотреть видео о производстве</p>
-            </div>
-        </div>
-        </div>
-    </section>
+    @@include('html/play-block-2.html')
 
     <section class="about-benefits">
         <div class="container">
@@ -135,16 +103,7 @@
         </div>
     </section>
 
-    <section class="eco">
-        <div class="container">
-            <div class="eco__content">
-                <img src="@img/main/eco.svg">
-                <h1>Эко продукция</h1>
-                <p>Выращиваем каждое деревцо с любовью, на экологически
-                    чистой земле, без использования пестицидов и химии</p>
-            </div>
-        </div>
-    </section>
+    @@include('html/eco.html')
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>

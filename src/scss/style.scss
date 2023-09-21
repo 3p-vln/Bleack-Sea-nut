@@ -293,7 +293,8 @@ ul {
 
         &__tel {
             font-size: 13px;
-            span{
+
+            span {
                 color: #337D5A;
             }
         }
@@ -498,7 +499,7 @@ ul {
             .inst {
                 margin-top: 1px;
             }
-        
+
             .facebook:hover,
             .inst:hover,
             .youtube:hover {
@@ -517,6 +518,7 @@ ul {
     background-size: cover;
     background-position: bottom center;
     margin-top: 16px;
+    position: relative;
 
     &__content {
         color: white;
@@ -548,6 +550,25 @@ ul {
             margin-bottom: 40px;
         }
 
+    }
+
+    &__video {
+            position: absolute;
+            width: 100%;
+            height: 600px;
+            top: 0;
+            display: none;
+            transition: 0.55s opacity, 0.55s visibility;
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+    }
+
+    &.active {
+        .play-block__video {
+            display: block;
+        }
     }
 
 }
@@ -926,6 +947,25 @@ ul {
         height: 472px;
         margin-top: 34px;
         position: relative;
+        .slide__video{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            display: none;
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .block-2__background{
+            &.active{
+                .slide__video{
+                    display: block;
+                }
+            }
+        }
     }
 
     &__play {
@@ -940,7 +980,7 @@ ul {
         width: 141px;
         height: 58px;
         background: #337d5a;
-        z-index: 5;
+        z-index: 20;
         top: 415px;
 
 
@@ -1030,6 +1070,7 @@ ul {
     background-size: cover;
     background-position: bottom center;
     margin-top: 70px;
+    position: relative;
 
     &__content {
         font-family: Raleway;
@@ -1059,6 +1100,23 @@ ul {
             letter-spacing: 0.24px;
             text-align: center;
             margin-top: 27px;
+        }
+    }
+
+    &__video{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        display: none;
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &.active{
+        .play-block-2__video{
+            display: block;
         }
     }
 }
@@ -1286,17 +1344,18 @@ ul {
         margin-right: 150px;
     }
 
-    .about-benefits{
+    .about-benefits {
         &__nuts {
             flex-wrap: wrap;
             justify-content: center;
+
             .nut {
                 margin-bottom: 30px;
                 margin-right: auto;
                 margin-left: auto;
             }
         }
-    
+
     }
 
     .productions__all {
@@ -1366,24 +1425,24 @@ ul {
 }
 
 @media (max-width:900px) {
-    .statistics{
+    .statistics {
         &__content {
             flex-direction: column;
         }
-    
+
         .stat-1,
         .stat-2,
         .stat-3,
         .stat-4 {
             margin: 0 auto;
         }
-    
+
         .about-benefits__info {
             width: 450px;
         }
     }
 
-    .about-benefits__info{
+    .about-benefits__info {
         max-width: 455px;
     }
 }
@@ -1410,47 +1469,47 @@ ul {
         font-size: 15px;
     }
 
-    .about-benefits{
+    .about-benefits {
         &__info {
             width: 335px;
             margin-left: auto;
             margin-right: auto;
         }
-    
+
         .nut__pic,
         .nut__overlay-bg {
             width: 320px;
         }
-    
+
         .nut__image {
             top: 140px;
         }
-    
+
         .nut__name {
             font-size: 35px;
             top: 190px;
         }
-    
+
         .nut__image-overlay {
             top: 35px;
             padding-left: 0;
         }
-    
+
         .nut__name-overlay {
             font-size: 35px;
             top: 85px;
         }
-    
+
         .nut__about-1 {
             top: 160px;
             width: 304px;
         }
-    
+
         .nut__about-1,
         .nut__about-2 {
             font-size: 16px;
         }
-    
+
         .nut__about-2 {
             top: 285px;
         }
@@ -1461,18 +1520,23 @@ ul {
     .productions {
         .product {
             width: 320px;
+
             &__btn-buy {
                 left: 212px;
+
                 button {
                     width: 90px;
                 }
             }
+
             &__arrows {
                 width: 310px;
             }
+
             &__weight-and-packaging {
                 width: 280px;
             }
+
             .zoom {
                 left: 128px;
             }

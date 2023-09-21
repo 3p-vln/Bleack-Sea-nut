@@ -10,6 +10,21 @@ menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
 })
 
+let videoBtn = document.querySelector('.play-block');
+videoBtn.addEventListener('click', function(){
+    videoBtn.classList.toggle('active');
+})
+
+let videoBtnSwiper = document.querySelector('.block-2__background');
+videoBtnSwiper.addEventListener('click', function(){
+    videoBtnSwiper.classList.toggle('active');
+})
+
+let videoBtn_2 = document.querySelector('.play-block-2');
+videoBtn_2.addEventListener('click', function(){
+    videoBtn_2.classList.toggle('active');
+})
+
 var swiper = new Swiper(".product-swiper", {
     spaceBetween: 30,
     navigation: {
