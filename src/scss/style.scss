@@ -1460,6 +1460,13 @@ ul {
             justify-content: center;
 
         }
+
+        &:hover {
+            a {
+                color: white;
+                background: #337D5A;
+            }
+        }
     }
 }
 
@@ -1477,21 +1484,21 @@ ul {
         gap: 39px;
     }
 
-    .about-the-manufacturer__block-2 {
-        display: none;
-    }
+    .about-the-manufacturer {
+        &__block-1 {
+            width: 100%;
+        }
 
-    .about-the-manufacturer__block-1 {
-        width: 100%;
-    }
+        &__about-info-1,
+        &__about-info-2 {
+            width: 100%;
+        }
 
-    .about-the-manufacturer__about-info-1,
-    .about-the-manufacturer__about-info-2 {
-        width: 100%;
-    }
-
-    .about-the-manufacturer__content {
-        margin-top: 100px;
+        &__content {
+            margin-top: 100px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .statistics__content {
@@ -1625,6 +1632,30 @@ ul {
     .about-benefits__info {
         max-width: 455px;
     }
+
+    .about-the-manufacturer {
+        &__block-2 {
+            width: 600px;
+            height: 405px;
+
+            .block-2__background {
+                .background__img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__arrows {
+            top: 347px;
+        }
+
+        &__play {
+            position: absolute;
+            z-index: 5;
+            top: 170px;
+            left: 270px;
+        }
+    }
 }
 
 @media (max-width:650px) {
@@ -1697,13 +1728,15 @@ ul {
         .nut__about-2 {
             top: 285px;
         }
+    }
 
-        .news {
-            &__head {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    .news {
+        &__head {
+            display: block;
         }
+    }
+    .about-the-manufacturer__block-2 {
+        display: none;
     }
 }
 
@@ -1734,4 +1767,36 @@ ul {
         }
     }
 
+    .news {
+        &__card {
+
+            .bg,
+            .card__video {
+                position: relative;
+                width: 335px;
+                height: 230px;
+            }
+
+            .card__title {
+                font-size: 13px;
+            }
+
+            .card__play {
+                top: 75px;
+                left: 135px;
+            }
+
+            .card__short-new {
+                font-size: 12px;
+            }
+        }
+
+        &__link {
+            margin-top: 20px;
+        }
+
+        &__swiper {
+            margin-top: 30px;
+        }
+    }
 }

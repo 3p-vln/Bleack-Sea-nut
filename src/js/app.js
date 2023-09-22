@@ -47,7 +47,7 @@ var swiper = new Swiper(".block-2__swiper", {
     },
     keyboard: true,
 });
-//митьбю
+
 var swiper = new Swiper(".news__swiper", {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -57,8 +57,11 @@ var swiper = new Swiper(".news__swiper", {
     },
     keyboard: true,
     breakpoints: {
-        
-        650:{
+        450:{
+            slidesPerView: 1,
+            spaceBetween: 0, 
+        },
+        651:{
             slidesPerView: 1.4,
             spaceBetween: 50,
         },
