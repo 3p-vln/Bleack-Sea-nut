@@ -1470,6 +1470,119 @@ ul {
     }
 }
 
+.contacts {
+    margin-top: 75px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        color: #1A2F3F;
+        font-family: Montserrat;
+    }
+
+    &__colum-first {
+        .colum-first {
+            &__title {
+                font-family: Raleway;
+                font-size: 45px;
+                font-weight: 800;
+                margin-bottom: 70px;
+            }
+
+            &__tel-and-socials {
+                display: flex;
+                align-items: center;
+                gap: 48px;
+
+                .tel {
+                    display: flex;
+                    gap: 15px;
+
+                    &__icon {
+                        width: 15px;
+                    }
+
+                    &__phones {
+                        display: flex;
+                        flex-direction: column;
+
+                        .phone {
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 21px;
+                            margin-bottom: 3px;
+                        }
+                    }
+                }
+
+                .socials {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+
+            &__mail {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 500;
+                margin-top: 42px;
+                gap: 15px;
+            }
+
+            &__office {
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;
+                margin-top: 48px;
+
+                .office {
+                    &__title {
+                        font-family: Raleway;
+                        font-size: 17px;
+                        font-weight: 800;
+                        margin-top: 0;
+                        margin-bottom: 18px;
+                    }
+
+                    &__adress {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 21px;
+                    }
+                }
+            }
+
+            &__production {
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;
+                margin-top: 21px;
+
+                .production {
+                    &__title {
+                        font-family: Raleway;
+                        font-size: 17px;
+                        font-weight: 800;
+                        margin-top: 0;
+                        margin-bottom: 18px;
+                    }
+
+                    &__adress {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__colum-two{
+        margin-top: 28px;
+    }
+}
+
 @media (max-width:1350px) {
     .container {
         max-width: 1000px;
@@ -1735,6 +1848,7 @@ ul {
             display: block;
         }
     }
+
     .about-the-manufacturer__block-2 {
         display: none;
     }
