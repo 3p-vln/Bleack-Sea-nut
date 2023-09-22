@@ -266,7 +266,6 @@ ul {
     }
 }
 
-
 .header-adapt {
     display: none;
     position: fixed;
@@ -1751,6 +1750,15 @@ ul {
             width: 635px;
         }
     }
+
+    .footer{
+        &__menu {
+            flex-direction: column;
+        }
+        &::before{
+            top: 125px;
+        }
+    }
 }
 
 @media (max-width:1024px) {
@@ -1793,6 +1801,15 @@ ul {
             iframe {
                 width: 739px;
             }
+        }
+    }
+
+    .footer{
+        &__menu {
+            display: none;
+        }
+        &::before{
+            top: 0px;
         }
     }
 }
@@ -1970,6 +1987,16 @@ ul {
     .contacts__colum-two iframe {
         width: 375px;
         height: 375px;
+    }
+
+    .footer{
+        &__last-line{
+            flex-wrap: wrap;
+            .last-line__developer {
+                text-align: center;
+                width: 100%;
+            }
+        }
     }
 }
 
