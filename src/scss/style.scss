@@ -1654,6 +1654,12 @@ ul {
     .productions__all {
         padding: 0 80px;
     }
+
+    .contacts__colum-two{
+        iframe{
+            width: 635px;
+        }
+    }
 }
 
 @media (max-width:1024px) {
@@ -1684,6 +1690,19 @@ ul {
 
     .productions__all {
         padding: 0;
+    }
+
+    .contacts{
+        &__content{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__colum-two{
+            iframe{
+                width: 739px;
+            }
+        }
     }
 }
 
@@ -1769,6 +1788,10 @@ ul {
             left: 270px;
         }
     }
+
+    .contacts__colum-two iframe {
+        width: 580px;
+    }
 }
 
 @media (max-width:650px) {
@@ -1851,6 +1874,11 @@ ul {
 
     .about-the-manufacturer__block-2 {
         display: none;
+    }
+
+    .contacts__colum-two iframe {
+        width: 375px;
+        height: 375px;
     }
 }
 
