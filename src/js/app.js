@@ -10,25 +10,35 @@ menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
 })
 
-let videoBtn = document.querySelector('.play-block');
-videoBtn.addEventListener('click', function () {
-    videoBtn.classList.toggle('active');
-})
+// let videoBtn = document.querySelector('.play-block');
+// videoBtn.addEventListener('click', function () {
+//     videoBtn.classList.toggle('active');
+// })
 
-let videoBtnSwiper = document.querySelector('.block-2__background');
-videoBtnSwiper.addEventListener('click', function () {
-    videoBtnSwiper.classList.toggle('active');
-})
+// let videoBtnSwiper = document.querySelector('.block-2__background');
+// videoBtnSwiper.addEventListener('click', function () {
+//     videoBtnSwiper.classList.toggle('active');
+// })
 
-let videoBtn_2 = document.querySelector('.play-block-2');
-videoBtn_2.addEventListener('click', function () {
-    videoBtn_2.classList.toggle('active');
-})
+// let videoBtn_2 = document.querySelector('.play-block-2');
+// videoBtn_2.addEventListener('click', function () {
+//     videoBtn_2.classList.toggle('active');
+// })
 
-let videoBtn_new = document.querySelector('.card__video');
-videoBtn_new.addEventListener('click', function () {
-    videoBtn_new.classList.toggle('active');
-})
+// let videoBtn_new = document.querySelector('.card__video');
+// videoBtn_new.addEventListener('click', function () {
+//     videoBtn_new.classList.toggle('active');
+// })
+
+jQuery(document).ready(function ($) {
+    (function initPlayVideo() {
+        $(".video-cover").on("click", function () {
+            $(this).fadeOut().siblings('.video').html(
+                '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt' + $(".f-video-cover").data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            );
+        });
+    })();
+});
 
 var swiper = new Swiper(".product-swiper", {
     spaceBetween: 30,

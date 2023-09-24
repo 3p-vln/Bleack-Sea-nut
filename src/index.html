@@ -9,20 +9,16 @@
     @@include('html/header.html')
 
     <section class="play-block">
-        <div class="container">
-            <div class="play-block__content">
-                <h1>Орех Причерноморья</h1>
-                <p>Единственный в Украине сад совместного
-                    выращивание фундука и грецкого ореха</p>
-                <img src="@img/main/play-icon.svg" loading="lazy">
+        <div class="play-block__video video"></div>
+            <div class="play-block__content video-cover">
+                <img src="@img/main/main-bg.jpg" class="content__bg">
+                <div class="play-block__text">
+                    <h1>Орех Причерноморья</h1>
+                    <p>Единственный в Украине сад совместного
+                        выращивание фундука и грецкого ореха</p>
+                    <img src="@img/main/play-icon.svg" loading="lazy">    
+                </div>
             </div>
-        </div>
-        <div class="play-block__video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
     </section>
 
     @@include('html/productions.html')
@@ -111,6 +107,7 @@
 
     @@include('html/footer.html')
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>

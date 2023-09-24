@@ -26,6 +26,7 @@ ul {
 
     &__content {
         display: flex;
+        justify-content: space-between;
         margin-top: -4px;
     }
 
@@ -55,9 +56,6 @@ ul {
         text-align: center;
         display: flex;
         justify-content: center;
-        margin-left: 455px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     &__login-and-registration {
@@ -72,7 +70,8 @@ ul {
     &__login {
         position: relative;
         display: flex;
-        margin-right: 24px;
+        margin-right: 28px;
+        gap: 5px;
     }
 
     &__registration {
@@ -140,14 +139,14 @@ ul {
     &__social {
         display: flex;
         gap: 10px;
-        margin-right: 31px;
+        margin-right: 32px;
     }
 
     &__phones {
         display: flex;
         flex-direction: column;
         gap: 3px;
-        margin-right: 93px;
+        margin-right: 95px;
     }
 
     .tel {
@@ -511,22 +510,54 @@ ul {
 }
 
 .play-block {
-    background-image: url("@img/main/main-bg.jpg");
-    background-repeat: no-repeat;
-    height: 600px;
-    background-size: cover;
-    background-position: bottom center;
-    margin-top: 16px;
+    margin-top: 15px;
+    font-family: Raleway;
+    color: #FFF;
     position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
 
-    &__content {
-        color: white;
-        font-family: Raleway;
+    .video {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 600px;
+
+        iframe,
+        object,
+        embed {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        &-cover {
+            position: absolute;
+            top: 0;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .content__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__text {
+        position: absolute;
+        top: 0;
         display: flex;
         flex-direction: column;
-        align-content: center;
-        flex-wrap: wrap;
+        align-items: center;
         padding-top: 143px;
+        width: 100%;
 
         h1 {
             font-size: 62px;
@@ -548,29 +579,7 @@ ul {
             max-width: 690px;
             margin-bottom: 40px;
         }
-
     }
-
-    &__video {
-        position: absolute;
-        width: 100%;
-        height: 600px;
-        top: 0;
-        display: none;
-        transition: 0.55s opacity, 0.55s visibility;
-
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    &.active {
-        .play-block__video {
-            display: block;
-        }
-    }
-
 }
 
 .arrow__right {
@@ -1066,23 +1075,57 @@ ul {
     }
 }
 
-
 .play-block-2 {
-    background-image: url("@img/main/play-bock-2.jpg");
-    background-repeat: no-repeat;
-    height: 740px;
-    background-size: cover;
-    background-position: bottom center;
     margin-top: 70px;
+    font-family: Raleway;
+    color: #FFF;
     position: relative;
+    height: 740px;
+    display: flex;
+    justify-content: center;
 
-    &__content {
-        font-family: Raleway;
-        color: #FFF;
+    .video {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 740px;
+
+        iframe,
+        object,
+        embed {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        &-cover {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+
+    
+    .content__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__text {
+        position: absolute;
+        top: 0;
         display: flex;
         flex-direction: column;
         align-content: center;
         flex-wrap: wrap;
+        width: 100%;
+
 
         h2 {
             text-align: center;
@@ -1104,25 +1147,6 @@ ul {
             letter-spacing: 0.24px;
             text-align: center;
             margin-top: 27px;
-        }
-    }
-
-    &__video {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        display: none;
-
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    &.active {
-        .play-block-2__video {
-            display: block;
         }
     }
 }
@@ -1751,11 +1775,12 @@ ul {
         }
     }
 
-    .footer{
+    .footer {
         &__menu {
             flex-direction: column;
         }
-        &::before{
+
+        &::before {
             top: 125px;
         }
     }
@@ -1804,11 +1829,12 @@ ul {
         }
     }
 
-    .footer{
+    .footer {
         &__menu {
             display: none;
         }
-        &::before{
+
+        &::before {
             top: 0px;
         }
     }
@@ -1989,9 +2015,10 @@ ul {
         height: 375px;
     }
 
-    .footer{
-        &__last-line{
+    .footer {
+        &__last-line {
             flex-wrap: wrap;
+
             .last-line__developer {
                 text-align: center;
                 width: 100%;
