@@ -977,6 +977,7 @@ ul {
             &-cover {
                 position: absolute;
                 top: 0;
+                cursor: pointer;
             }
         }
     }
@@ -1402,6 +1403,7 @@ ul {
                     &-cover{
                         position: absolute;
                         top: 0;
+                        cursor: pointer;
                     }
                 }
             }
