@@ -1643,6 +1643,10 @@ ul {
                 gap: 60px;
                 margin-top: 20px;
             }
+
+            &__item:hover{
+                color: #337d5a;
+            }
         }
     }
 
