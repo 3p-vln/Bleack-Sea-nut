@@ -619,9 +619,10 @@ ul {
     }
 
     &__all {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 48px 30px;
         margin-top: 62px;
     }
 
@@ -631,7 +632,6 @@ ul {
         border: 1px solid rgba(0, 0, 0, 0.08);
         background: #FFF;
         position: relative;
-        margin-bottom: 48px;
 
         &-swiper.swiper {
             height: 260px;
@@ -852,7 +852,7 @@ ul {
     &__btn-to-shop {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 69px;
 
         button {
             width: 200px;
@@ -1012,17 +1012,12 @@ ul {
 }
 
 .statistics {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-
     &__content {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0 18px;
+        justify-content: center;
         margin-top: 98px;
-        padding-left: 5px;
     }
 
     h2 {
@@ -1061,18 +1056,6 @@ ul {
         line-height: normal;
         letter-spacing: 0.36px;
         margin-top: 5px;
-    }
-
-    .stat-1 {
-        margin-right: 202px;
-    }
-
-    .stat-2 {
-        margin-right: 124px;
-    }
-
-    .stat-3 {
-        margin-right: 102px;
     }
 }
 
@@ -1183,12 +1166,12 @@ ul {
     }
 
     &__nuts {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 26px;
         margin-top: 64px;
 
         .nut {
-            margin-right: 30px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -1400,7 +1383,7 @@ ul {
                         width: 100%;
                     }
 
-                    &-cover{
+                    &-cover {
                         position: absolute;
                         top: 0;
                         cursor: pointer;
@@ -1644,7 +1627,7 @@ ul {
                 margin-top: 20px;
             }
 
-            &__item:hover{
+            &__item:hover {
                 color: #337d5a;
             }
         }
@@ -1738,37 +1721,16 @@ ul {
     }
 
     .statistics__content {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding-left: 0;
-    }
-
-    .stat-1 {
-        margin-right: 150px;
-        margin-left: 115px;
-    }
-
-    .stat-2 {
-        margin-right: 150px;
-    }
-
-    .stat-3 {
-        margin-left: 52px;
-    }
-
-    .stat-4 {
-        margin-right: 150px;
+        grid-template-columns: 1fr 1fr;
     }
 
     .about-benefits {
         &__nuts {
-            flex-wrap: wrap;
-            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 77px;
 
-            .nut {
-                margin-bottom: 30px;
-                margin-right: auto;
-                margin-left: auto;
+            .nut:nth-child(3){
+                grid-column: 1 / 3;
             }
         }
 
@@ -1776,6 +1738,7 @@ ul {
 
     .productions__all {
         padding: 0 80px;
+        grid-template-columns: 1fr 1fr;
     }
 
     .contacts__colum-two {
@@ -1823,6 +1786,7 @@ ul {
 
     .productions__all {
         padding: 0;
+        grid-template-columns: 1fr;
     }
 
     .contacts {
@@ -1845,6 +1809,17 @@ ul {
 
         &::before {
             top: 0px;
+        }
+    }
+
+    .about-benefits{
+        &__nuts{
+            grid-template-columns: 1fr;
+            padding: 0;
+
+            .nut:nth-child(3) {
+                grid-column: 1/1;
+            }
         }
     }
 }
@@ -1885,23 +1860,6 @@ ul {
 @media (max-width:1000px) {
     .container {
         max-width: 600px;
-    }
-
-    .statistics {
-        &__content {
-            flex-direction: column;
-        }
-
-        .stat-1,
-        .stat-2,
-        .stat-3,
-        .stat-4 {
-            margin: 0 auto;
-        }
-
-        .about-benefits__info {
-            width: 450px;
-        }
     }
 
     .about-benefits__info {
@@ -2033,6 +1991,10 @@ ul {
                 width: 100%;
             }
         }
+    }
+
+    .statistics__content {
+        grid-template-columns: 1fr;
     }
 }
 
