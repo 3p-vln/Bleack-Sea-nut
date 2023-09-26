@@ -99,7 +99,6 @@ ul {
     &__language {
         background: none;
         border: none;
-        font-family: Montserrat;
         font-size: 13px;
         font-weight: 500;
         color: #000;
@@ -595,7 +594,6 @@ ul {
 
     &__title {
         color: #1A2F3F;
-        font-family: Raleway;
         font-size: 45px;
         font-style: normal;
         font-weight: 800;
@@ -608,7 +606,6 @@ ul {
     &__about {
         color: #1A2F3F;
         text-align: center;
-        font-family: Raleway;
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
@@ -621,14 +618,13 @@ ul {
 
     &__all {
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));;
         grid-gap: 48px 30px;
         margin-top: 62px;
     }
 
     & .product {
-        width: 406px;
+        max-width: 406px;
         height: 534px;
         border: 1px solid rgba(0, 0, 0, 0.08);
         background: #FFF;
@@ -651,7 +647,7 @@ ul {
             margin-top: 21px;
         }
 
-        &__2 .product__image {
+        &__two .product__image {
             margin-top: 49px;
             margin-bottom: 57px;
         }
@@ -759,6 +755,13 @@ ul {
             }
         }
 
+        &__price-and-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 386px;
+        }
+
         &__price {
             display: flex;
             margin-left: 20px;
@@ -791,7 +794,6 @@ ul {
 
                 &__before {
                     color: #8A8A8A;
-                    font-family: Montserrat;
                     font-size: 13px;
                     font-style: normal;
                     font-weight: 500;
@@ -818,9 +820,7 @@ ul {
         }
 
         &__btn-buy {
-            position: absolute;
-            left: 261px;
-            top: 476px;
+            margin-top: 12px;
 
             button {
                 width: 124px;
@@ -839,7 +839,6 @@ ul {
                     border: 1px solid #337D5A;
                     background: none;
                     color: #337D5A;
-                    font-family: Raleway;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 700;
@@ -872,7 +871,6 @@ ul {
                 border: 1.5px solid #337D5A;
                 background: #337D5A;
                 color: #FFF;
-                font-family: Raleway;
                 font-size: 15px;
                 font-style: normal;
                 font-weight: 700;
@@ -888,12 +886,12 @@ ul {
         display: flex;
         justify-content: space-between;
         margin-top: 157px;
+        font-family: Raleway;
     }
 
-    &__block-1 {
+    &__block-first {
         width: 486px;
         color: #1A2F3F;
-        font-family: Raleway;
         margin-top: 24px;
     }
 
@@ -905,8 +903,8 @@ ul {
         margin-bottom: 40px;
     }
 
-    &__about-info-1,
-    &__about-info-2 {
+    &__about-info-first,
+    &__about-info-two {
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -915,13 +913,13 @@ ul {
         width: 426px;
     }
 
-    &__about-info-1 {
+    &__about-info-first {
         span {
             color: #337D5A;
         }
     }
 
-    &__about-info-2 {
+    &__about-info-two {
         margin-top: 25px;
         width: 487px;
     }
@@ -933,7 +931,6 @@ ul {
         border: 1.5px solid #337D5A;
         background: none;
         color: #337D5A;
-        font-family: Raleway;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
@@ -944,7 +941,6 @@ ul {
             border: 1.5px solid #337D5A;
             background: #337D5A;
             color: #FFF;
-            font-family: Raleway;
             font-size: 15px;
             font-style: normal;
             font-weight: 700;
@@ -953,7 +949,7 @@ ul {
         }
     }
 
-    &__block-2 {
+    &__block-two {
         width: 700px;
         height: 472px;
         margin-top: 34px;
@@ -1015,7 +1011,7 @@ ul {
 .statistics {
     &__content {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));;
         grid-gap: 0 18px;
         justify-content: center;
         margin-top: 98px;
@@ -1157,7 +1153,6 @@ ul {
     &__info {
         color: #1A2F3F;
         text-align: center;
-        font-family: Raleway;
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
@@ -1169,7 +1164,7 @@ ul {
 
     &__nuts {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));;
         grid-gap: 26px;
         margin-top: 64px;
 
@@ -1706,21 +1701,21 @@ ul {
     letter-spacing: -0.5px;
     opacity: 0.7;
 
-    &__content{
+    &__content {
         position: absolute;
         top: 215px;
     }
 
-    &__main{
+    &__main {
         margin-right: 8px;
     }
 
-    &__arr{
+    &__arr {
         margin-top: 2px;
         margin-right: 7px;
     }
 
-    a:hover{
+    a:hover {
         color: #337D5A;
     }
 }
@@ -1740,12 +1735,12 @@ ul {
     }
 
     .about-the-manufacturer {
-        &__block-1 {
+        &__block-first {
             width: 100%;
         }
 
-        &__about-info-1,
-        &__about-info-2 {
+        &__about-info-first,
+        &__about-info-two {
             width: 100%;
         }
 
@@ -1757,12 +1752,11 @@ ul {
     }
 
     .statistics__content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
     }
 
     .about-benefits {
         &__nuts {
-            grid-template-columns: 1fr 1fr;
             padding: 0 77px;
 
             .nut:nth-child(3) {
@@ -1774,7 +1768,6 @@ ul {
 
     .productions__all {
         padding: 0 80px;
-        grid-template-columns: 1fr 1fr;
     }
 
     .contacts__colum-two {
@@ -1833,11 +1826,11 @@ ul {
         }
     }
 
-    .productions__all{
+    .productions__all {
         padding: 0;
     }
 
-    .about-benefits__nuts{
+    .about-benefits__nuts {
         padding: 0;
     }
 
@@ -1880,7 +1873,6 @@ ul {
 
     .productions__all {
         gap: 20px;
-        grid-template-columns: 1fr;
     }
 
     .product {
@@ -1890,8 +1882,6 @@ ul {
 
     .about-benefits {
         &__nuts {
-            grid-template-columns: 1fr;
-
             .nut:nth-child(3) {
                 grid-column: 1/1;
             }
@@ -1909,11 +1899,11 @@ ul {
     }
 
     .about-the-manufacturer {
-        &__block-2 {
+        &__block-two {
             width: 600px;
             height: 405px;
 
-            .block-2__background {
+            .block-two__background {
                 .background__img {
                     width: 100%;
                 }
@@ -2015,7 +2005,7 @@ ul {
         }
     }
 
-    .about-the-manufacturer__block-2 {
+    .about-the-manufacturer__block-two {
         display: none;
     }
 
@@ -2033,10 +2023,6 @@ ul {
                 width: 100%;
             }
         }
-    }
-
-    .statistics__content {
-        grid-template-columns: 1fr;
     }
 }
 
