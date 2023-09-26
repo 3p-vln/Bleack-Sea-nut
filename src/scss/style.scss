@@ -1267,7 +1267,7 @@ ul {
     margin-top: 96px;
     position: relative;
 
-    &__bg{
+    &__bg {
         position: relative;
         width: 100%;
         height: 740px;
@@ -1698,6 +1698,33 @@ ul {
     }
 }
 
+.bread-crumbs {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    opacity: 0.7;
+
+    &__content{
+        position: absolute;
+        top: 215px;
+    }
+
+    &__main{
+        margin-right: 8px;
+    }
+
+    &__arr{
+        margin-top: 2px;
+        margin-right: 7px;
+    }
+
+    a:hover{
+        color: #337D5A;
+    }
+}
+
 @media (max-width:1350px) {
     .container {
         max-width: 1000px;
@@ -1738,7 +1765,7 @@ ul {
             grid-template-columns: 1fr 1fr;
             padding: 0 77px;
 
-            .nut:nth-child(3){
+            .nut:nth-child(3) {
                 grid-column: 1 / 3;
             }
         }
@@ -1793,11 +1820,6 @@ ul {
         display: none;
     }
 
-    .productions__all {
-        padding: 0;
-        grid-template-columns: 1fr;
-    }
-
     .contacts {
         &__content {
             flex-direction: column;
@@ -1811,6 +1833,14 @@ ul {
         }
     }
 
+    .productions__all{
+        padding: 0;
+    }
+
+    .about-benefits__nuts{
+        padding: 0;
+    }
+
     .footer {
         &__menu {
             display: none;
@@ -1821,15 +1851,8 @@ ul {
         }
     }
 
-    .about-benefits{
-        &__nuts{
-            grid-template-columns: 1fr;
-            padding: 0;
-
-            .nut:nth-child(3) {
-                grid-column: 1/1;
-            }
-        }
+    .bread-crumbs__content {
+        top: 120px;
     }
 }
 
@@ -1856,13 +1879,23 @@ ul {
     }
 
     .productions__all {
-        padding: 0 0;
         gap: 20px;
+        grid-template-columns: 1fr;
     }
 
     .product {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .about-benefits {
+        &__nuts {
+            grid-template-columns: 1fr;
+
+            .nut:nth-child(3) {
+                grid-column: 1/1;
+            }
+        }
     }
 }
 
