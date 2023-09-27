@@ -556,12 +556,19 @@ ul {
         }
     }
 
-    &.main .play-block__content{
+    &.main .play-block__content {
         background-image: url(@img/main/main-bg.jpg);
         background-size: cover;
         background-position: bottom center;
-        height: 600px;
+        height: 100%;
 
+    }
+
+    &.about-productions .play-block__content {
+        background-image: url(@img/about-productions/main-bg.jpg);
+        background-size: cover;
+        background-position: bottom center;
+        height: 100%;
     }
 
     &__text {
@@ -601,6 +608,7 @@ ul {
     &__content {
         font-family: Raleway;
         margin-top: 82px;
+        padding-bottom: 91px;
     }
 
     &__title {
@@ -897,7 +905,7 @@ ul {
     &__content {
         display: flex;
         justify-content: space-between;
-        margin-top: 157px;
+        margin-top: 65px;
         font-family: Raleway;
     }
 
@@ -1104,7 +1112,7 @@ ul {
         }
     }
 
-    &__content{
+    &__content {
         background-image: url('@img/main/play-bock-2.jpg');
         background-size: cover;
         background-position: bottom center;
@@ -1270,8 +1278,15 @@ ul {
 .eco {
     margin-top: 96px;
 
-    &.main{
+    &.main {
         background-image: url(@img/main/eco-bg.jpg);
+        background-size: cover;
+        background-position: bottom center;
+        height: 740px;
+    }
+
+    &.about-productions {
+        background-image: url(@img/about-productions/eco.jpg);
         background-size: cover;
         background-position: bottom center;
         height: 740px;
@@ -1722,6 +1737,110 @@ ul {
 
     a:hover {
         color: #337D5A;
+    }
+}
+
+.history {
+    &__content {
+        display: flex;
+        margin-top: 192px;
+    }
+
+    &__pavel-taluba {
+        color: #1A2F3F;
+        font-family: Raleway;
+        padding: 5px 44px;
+
+        h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 0;
+        }
+
+        .pavel-taluba {
+            &__about {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                margin-top: 10px;
+                max-width: 293px;
+            }
+
+            &__quote {
+                display: flex;
+                align-items: flex-start;
+                gap: 12px;
+                margin-top: 21px;
+
+                img {
+                    padding-top: 7px;
+                }
+
+                p {
+                    font-size: 15px;
+                    font-style: italic;
+                    font-weight: 500;
+                    line-height: 19px;
+                }
+            }
+
+            &__btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 186px;
+                height: 52px;
+                border: 1.5px solid #337D5A;
+                color: #337D5A;
+                font-size: 14px;
+                font-weight: 700;
+                margin-top: 44px;
+
+                &:hover{
+                    background-color: #337d5a;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &__history-of-productions {
+        width: 360px;
+        height: 467px;
+        background-image: url('../img/about-productions/logo.svg');
+        background-repeat: no-repeat;
+        background-position: 219px 220px;
+        background-color: #337D5A;
+        color: #FCFCFC;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        padding: 13px 47px;
+
+        h2 {
+            font-family: Raleway;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 38px;
+        }
+
+        p {
+            letter-spacing: 0.1px;
+
+            &:nth-child(2) {
+                width: 360px;
+            }
+
+            &:nth-child(3) {
+                width: 372px;
+            }
+
+            &:nth-child(4) {
+                width: 315px;
+            }
+        }
     }
 }
 
