@@ -1749,6 +1749,7 @@ ul {
     &__pavel-taluba {
         color: #1A2F3F;
         font-family: Raleway;
+        width: 407px;
         padding: 5px 44px;
 
         h2 {
@@ -1796,7 +1797,7 @@ ul {
                 font-weight: 700;
                 margin-top: 44px;
 
-                &:hover{
+                &:hover {
                     background-color: #337d5a;
                     color: white;
                 }
@@ -1909,6 +1910,29 @@ ul {
             top: 125px;
         }
     }
+
+    .history {
+        &__content {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__history-of-productions {
+            width: 744px;
+            height: 285px;
+            background-position: 595px 60px;
+            margin-top: 10px;
+
+            p {
+
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width:1024px) {
@@ -2001,6 +2025,22 @@ ul {
             .nut:nth-child(3) {
                 grid-column: 1/1;
             }
+        }
+    }
+
+    .history {
+        &__image {
+            width: 246px;
+        }
+
+        &__pavel-taluba {
+            width: 260px;
+        }
+
+        &__history-of-productions {
+            width: 100%;
+            height: 352px;
+            background-position: 350px 130px;
         }
     }
 }
@@ -2140,6 +2180,18 @@ ul {
             }
         }
     }
+
+    .history {
+        &__pavel-taluba {
+            width: 100%;
+        }
+
+        &__history-of-productions {
+            height: 465px;
+            background-position: 185px 240px;
+            padding: 10px 20px;
+        }
+    }
 }
 
 @media (max-width:450px) {
@@ -2199,6 +2251,34 @@ ul {
 
         &__swiper {
             margin-top: 30px;
+        }
+    }
+
+    .history {
+        h2 {
+            font-size: 25px;
+        }
+
+        &__pavel-taluba {
+            .pavel-taluba {
+
+                &__about,
+                &__quote p {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        &__history-of-productions {
+            h2 {
+                margin-bottom: 25px;
+            }
+
+            p:nth-child(2),
+            p:nth-child(3),
+            p:nth-child(4) {
+                font-size: 13px;
+            }
         }
     }
 }
