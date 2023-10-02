@@ -5,7 +5,7 @@ body {
 .container {
     max-width: 1290px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
 a {
@@ -250,9 +250,9 @@ ul {
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.3px;
-    margin-left: 76px;
     margin-top: 31px;
-    gap: 67px;
+    justify-content: space-between;
+    padding: 0 77px;
 
     .nav-item {
         position: relative;
@@ -602,6 +602,7 @@ ul {
 
 .arrow__right {
     transform: scale(-1);
+    margin-right: 45px;
 }
 
 .productions {
@@ -638,17 +639,17 @@ ul {
     &__all {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(301px, 1fr));
-        ;
         grid-gap: 48px 30px;
         margin-top: 62px;
     }
 
     & .product {
-        width: 406px;
         height: 534px;
+        max-width: 410px;
         border: 1px solid rgba(0, 0, 0, 0.08);
         background: #FFF;
         position: relative;
+        padding: 0 20px;
 
         &-swiper.swiper {
             height: 260px;
@@ -657,7 +658,7 @@ ul {
         &__akciton-img,
         &__new-img {
             position: absolute;
-            margin-left: -2px;
+            left: -2px;
             margin-top: 20px;
         }
 
@@ -674,16 +675,16 @@ ul {
 
         &__hower {
             position: absolute;
+            display: flex;
+            max-width: 408px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
             z-index: 5;
-            top: 118px;
+            top: 123px;
             opacity: 0;
             visibility: hidden;
-            transition: 0.55s opacity, 0.55s visibility;
-
-            .zoom {
-                position: absolute;
-                left: 176px;
-            }
+            transition: .55s opacity, .55s visibility;
         }
 
         &:hover {
@@ -691,15 +692,6 @@ ul {
                 opacity: 1;
                 visibility: visible;
             }
-        }
-
-        &__arrows {
-            display: flex;
-            position: absolute;
-            top: 34px;
-            left: 4px;
-            justify-content: space-between;
-            width: 398px;
         }
 
         &__title {
@@ -710,7 +702,6 @@ ul {
             line-height: normal;
             letter-spacing: -0.3px;
             margin-top: 37px;
-            margin-left: 20px;
             margin-bottom: 0;
         }
 
@@ -723,7 +714,6 @@ ul {
             line-height: normal;
             letter-spacing: 0.15px;
             margin-top: 8px;
-            margin-left: 21px;
             margin-bottom: 0;
         }
 
@@ -735,7 +725,6 @@ ul {
             line-height: 20px;
             letter-spacing: 0px;
             margin-top: 10px;
-            margin-left: 21px;
             margin-bottom: 0;
             width: 242px;
         }
@@ -743,9 +732,7 @@ ul {
         &__weight-and-packaging {
             display: flex;
             justify-content: space-between;
-            margin-left: 20px;
             margin-top: 0px;
-            max-width: 360px;
 
             .weight,
             .packaging {
@@ -779,12 +766,10 @@ ul {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 386px;
         }
 
         &__price {
             display: flex;
-            margin-left: 20px;
             margin-top: 10px;
 
             .price {
@@ -1846,17 +1831,12 @@ ul {
 }
 
 @media (max-width:1350px) {
-    .container {
-        max-width: 1000px;
-    }
-
     .second-line__phones {
         margin-right: 45px;
     }
 
     .menu__navigate {
-        margin-left: 0;
-        gap: 39px;
+        padding: 0 50px;
     }
 
     .about-the-manufacturer {
@@ -1882,17 +1862,15 @@ ul {
 
     .about-benefits {
         &__nuts {
-            padding: 0 77px;
+            max-width: 846px;
+            margin-left: auto;
+            margin-right: auto;
 
             .nut:nth-child(3) {
                 grid-column: 1 / 3;
             }
         }
 
-    }
-
-    .productions__all {
-        padding: 0 80px;
     }
 
     .contacts__colum-two {
@@ -1935,10 +1913,13 @@ ul {
     }
 }
 
-@media (max-width:1044px) {
-    .container {
-        max-width: 850px;
+@media (max-width: 1165px) {
+    .productions .product__price .price__before {
+        display: none;
     }
+}
+
+@media (max-width:1044px) {
 
     .second-line__social,
     .second-line__phones {
@@ -1975,7 +1956,11 @@ ul {
     }
 
     .productions__all {
-        padding: 0;
+        padding: 0 45px;
+    }
+
+    .productions .product__price .price__before {
+        display: block;
     }
 
     .about-benefits__nuts {
@@ -2011,21 +1996,8 @@ ul {
         max-width: 611px;
     }
 
-    .productions__all {
-        gap: 20px;
-    }
-
-    .product {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .about-benefits {
-        &__nuts {
-            .nut:nth-child(3) {
-                grid-column: 1/1;
-            }
-        }
+    .productions .product__price .price__before {
+        display: none;
     }
 
     .history {
@@ -2046,10 +2018,6 @@ ul {
 }
 
 @media (max-width:1000px) {
-    .container {
-        max-width: 600px;
-    }
-
     .about-benefits__info {
         max-width: 455px;
     }
@@ -2083,9 +2051,35 @@ ul {
     }
 }
 
+@media (max-width:900px) {
+    .productions__all {
+        padding: 0 0;
+    }
+
+    
+    .about-benefits {
+        &__nuts {
+            grid-template-columns: 1fr;
+            .nut:nth-child(3) {
+                grid-column: 1/1;
+            }
+        }
+    }
+}
+
+@media (max-width:711px) {
+    .productions .product {
+        margin: 0 auto;
+    }
+}
+
 @media (max-width:650px) {
     .container {
-        max-width: 400px;
+        padding: 0 20px;
+    }
+
+    .productions .product__price .price__before {
+        display: block;
     }
 
     .play-block__content h1 {
@@ -2192,31 +2186,18 @@ ul {
             padding: 10px 20px;
         }
     }
+
 }
 
-@media (max-width:450px) {
+@media (max-width:500px) {
     .productions {
         .product {
-            width: 320px;
+            margin: 0 0;
 
             &__btn-buy {
-                left: 212px;
-
                 button {
                     width: 90px;
                 }
-            }
-
-            &__arrows {
-                width: 310px;
-            }
-
-            &__weight-and-packaging {
-                width: 280px;
-            }
-
-            .zoom {
-                left: 128px;
             }
         }
     }
