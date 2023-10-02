@@ -1834,6 +1834,110 @@ ul {
     }
 }
 
+.galery {
+    &-first {
+        &__content {
+            color: #1A2F3F;
+            font-family: Raleway;
+            text-align: center;
+            margin-top: 158px;
+        }
+    }
+
+    &__title {
+        font-size: 45px;
+        font-weight: 800;
+        margin-bottom: 0;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        margin-bottom: 67px;
+    }
+
+    &__cards {
+        color: white;
+        font-family: Montserrat;
+
+        .cards {
+
+            &__first-line,
+            &__last-line {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__first-line {
+                margin-bottom: 30px;
+                .card {
+                    height: 556px;
+                    position: relative;
+                    font-family: Montserrat;
+                    color: #FFF;
+
+                    &__hower {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(51, 125, 90, 0.97);
+                        text-align: left;
+                    }
+
+                    &__title {
+                        font-size: 22px;
+                        font-weight: 800;
+                        margin-top: 76px;
+                        margin-left: 40px;
+                    }
+
+                    &__text {
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 22px;
+                        margin-left: 39px;
+                        margin-top: 25px;
+                        width: 482px;
+                        letter-spacing: 0.1px;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card{
+            position: relative;
+
+            &__video{
+                position: relative;
+                width: 100%;
+                padding-bottom: 556px;
+            }
+            &__video-bg-first {
+                background-image: url('@img/about-productions/galery3.jpg');
+                background-size: cover;
+                background-position: bottom center;
+            }
+
+            .video-cover{
+                position: absolute;
+                top: 0;
+                cursor: pointer;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
 @media (max-width:1360px) {
     .second-line__phones {
         margin-right: 45px;
@@ -1988,6 +2092,10 @@ ul {
     .bread-crumbs__content {
         top: 120px;
     }
+
+    .menu__navigate {
+        padding: 0 0;
+    }
 }
 
 @media (max-width:1000px) {
@@ -2014,11 +2122,10 @@ ul {
         }
 
         &__pavel-taluba {
-            width: 260px;
+            width: 100%;
         }
 
         &__history-of-productions {
-            width: 500px;
             height: 352px;
             background-position: 350px 130px;
         }
@@ -2067,6 +2174,7 @@ ul {
     .about-benefits {
         &__nuts {
             grid-template-columns: 1fr;
+
             .nut:nth-child(3) {
                 grid-column: 1/1;
             }
