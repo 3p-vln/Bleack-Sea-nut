@@ -57,27 +57,15 @@ var swiper = new Swiper(".news__swiper", {
     },
     keyboard: true,
     breakpoints: {
-        450: {
+        375: {
             slidesPerView: 1,
             spaceBetween: 0,
         },
-        651: {
-            slidesPerView: 1.4,
-            spaceBetween: 50,
-        },
-        1024: {
+        1000: {
             slidesPerView: 2,
             spaceBetween: 30,
         },
-        1041: {
-            slidesPerView: 2.2,
-            spaceBetween: 80,
-        },
-        1100: {
-            slidesPerView: 2.4,
-            spaceBetween: 10,
-        },
-        1400: {
+        1360: {
             slidesPerView: 3,
             spaceBetween: 30,
         }

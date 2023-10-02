@@ -1354,6 +1354,10 @@ ul {
                 .swiper-button-next {
                     padding: 0 15px;
                 }
+
+                .arrow__right {
+                    margin-right: 75px;
+                }
             }
         }
     }
@@ -1830,7 +1834,7 @@ ul {
     }
 }
 
-@media (max-width:1350px) {
+@media (max-width:1360px) {
     .second-line__phones {
         margin-right: 45px;
     }
@@ -1910,6 +1914,10 @@ ul {
                 }
             }
         }
+    }
+
+    .news__swiper {
+        width: 846px;
     }
 }
 
@@ -2049,6 +2057,11 @@ ul {
     .contacts__colum-two iframe {
         width: 580px;
     }
+
+    
+    .news__swiper {
+        width: 408px;
+    }
 }
 
 @media (max-width:900px) {
@@ -2056,7 +2069,6 @@ ul {
         padding: 0 0;
     }
 
-    
     .about-benefits {
         &__nuts {
             grid-template-columns: 1fr;
@@ -2232,6 +2244,7 @@ ul {
 
         &__swiper {
             margin-top: 30px;
+            width: 335px;
         }
     }
 
