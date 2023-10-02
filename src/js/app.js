@@ -61,7 +61,7 @@ var swiper = new Swiper(".news__swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
         },
-        1000: {
+        920: {
             slidesPerView: 2,
             spaceBetween: 30,
         },

@@ -2018,7 +2018,7 @@ ul {
         }
 
         &__history-of-productions {
-            width: 100%;
+            width: 500px;
             height: 352px;
             background-position: 350px 130px;
         }
@@ -2057,14 +2057,9 @@ ul {
     .contacts__colum-two iframe {
         width: 580px;
     }
-
-    
-    .news__swiper {
-        width: 408px;
-    }
 }
 
-@media (max-width:900px) {
+@media (max-width:920px) {
     .productions__all {
         padding: 0 0;
     }
@@ -2076,6 +2071,10 @@ ul {
                 grid-column: 1/1;
             }
         }
+    }
+
+    .news__swiper {
+        width: 408px;
     }
 }
 
