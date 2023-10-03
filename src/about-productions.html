@@ -17,8 +17,34 @@
     "page":"О производстве"
     })
 
-    @@include('html/about-the-manufacturer.html')
-
+    <section class="about-the-manufacturer">
+        <div class="container">
+            <div class="about-the-manufacturer__content">
+                <div class="about-the-manufacturer__block-first">
+                    <h2 class="about-the-manufacturer__title">
+                        О производителе
+                    </h2>
+                    <p class="about-the-manufacturer__about-info-first">
+                        <span>Сельскохозяйственный обслуживающий кооператив
+                            “Орех Причерноморья”</span> выращивает смешанные сады
+                        ореха грецкого с фундуком, а также ореха грецкого
+                        с шиповником, на площади более 150 гектаров.
+                    </p>
+                    <p class="about-the-manufacturer__about-info-two">
+                        Помимо этого кооператив занимается выращиванием
+                        посадочного материала, саженцов привитого и непривитого
+                        грецкого ореха, фундука и шиповника.
+                    </p>
+                    <p class="about-the-manufacturer__about-info-third">
+                        Предприятие укомплектовано всей необходимой техникой
+                        и оборудованием для выращивания интенсивного сада, воспроизводства саженцев в питомнике и
+                        выращивания трюфеля.
+                    </p>
+                </div>
+                @@include('html/about-the-manufacturer.html')
+            </div>
+        </div>
+    </section>
     <section class="history">
         <div class="container">
             <div class="history__content">
@@ -53,7 +79,7 @@
             </div>
         </div>
     </section>
-    
+
     @@include('html/statistics.html')
 
     <div class="galery-first">
@@ -70,7 +96,7 @@
     </div>
 
     @@include('html/eco.html',{
-        "page": "about-productions"
+    "page": "about-productions"
     })
 
     @@include('html/news.html')

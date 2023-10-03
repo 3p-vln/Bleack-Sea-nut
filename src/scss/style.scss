@@ -909,7 +909,8 @@ ul {
     }
 
     &__about-info-first,
-    &__about-info-two {
+    &__about-info-two,
+    &__about-info-third {
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -929,6 +930,11 @@ ul {
         width: 487px;
     }
 
+    &__about-info-third{
+        margin-top: 25px;
+        width: 524px;
+    }
+
     &__btn {
         margin-top: 29px;
         width: 170px;
@@ -941,6 +947,9 @@ ul {
         font-weight: 700;
         line-height: normal;
         letter-spacing: 0.28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
             border: 1.5px solid #337D5A;
@@ -2232,7 +2241,8 @@ ul {
         }
 
         &__about-info-first,
-        &__about-info-two {
+        &__about-info-two,
+        &__about-info-third {
             width: 100%;
         }
 

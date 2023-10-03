@@ -59,7 +59,7 @@ var swiper = new Swiper(".news__swiper", {
     breakpoints: {
         375: {
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 30,
         },
         920: {
             slidesPerView: 2,
