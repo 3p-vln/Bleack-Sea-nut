@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+"title": "Галерея"
+})
+
+<body>
+    @@include('html/header.html')
+
+    <section class="gallery-baner">
+        <div class="container">
+            <div class="gallery-baner__content">
+                <h1 class="gallery-baner__title">Галерея</h1>
+                <p class="gallery-baner__text">Кадры социальной активности компании</p>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/bread-crumbs.html',{
+    "link": "all-gallery.html",
+    "page":"Галерея"
+    })
+
+    <section class="galery-two">
+        <div class="container">
+            <div class="galery-two__content">
+                @@include('html/galery.html')
+                <div class="galery__reverse">
+                    @@include('html/galery.html')
+                </div>
+                <a href="all-gallery.html" class="galery__btn">Посмотреть еще</a>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/contacts.html')
+
+    @@include('html/footer.html')
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
