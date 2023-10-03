@@ -1878,6 +1878,18 @@ ul {
                     font-family: Montserrat;
                     color: #FFF;
 
+                    &__left {
+                        max-width: 739px;
+                        margin-right: 30px;
+
+                        img {
+                            min-width: 370px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
                     &__hower {
                         position: absolute;
                         top: 0;
@@ -1910,11 +1922,17 @@ ul {
                         line-height: 22px;
                         margin-left: 39px;
                         margin-top: 25px;
-                        width: 482px;
+                        max-width: 482px;
                         letter-spacing: 0.1px;
 
                         span {
                             font-weight: 700;
+                        }
+                    }
+
+                    &__right {
+                        .card__text {
+                            max-width: 423px;
                         }
                     }
                 }
@@ -1923,10 +1941,36 @@ ul {
             &__last-line {
                 .card {
                     height: 404px;
-                    width: 409px;
+                    max-width: 409px;
+                    width: 100%;
                     position: relative;
                     font-family: Montserrat;
                     color: #FFF;
+
+                    &__left {
+                        margin-right: 30px;
+
+                        img {
+                            min-width: 294px;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            object-position: right;
+                        }
+                    }
+
+                    &__center {
+                        img {
+                            min-width: 294px;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &__right {
+                        margin-left: 30px;
+                    }
 
                     &__hower {
                         position: absolute;
@@ -1960,7 +2004,7 @@ ul {
                         line-height: 22px;
                         margin-left: 39px;
                         margin-top: 25px;
-                        width: 334px;
+                        max-width: 334px;
                         letter-spacing: 0.1px;
 
                         span {
@@ -2089,6 +2133,26 @@ ul {
                 }
             }
 
+        }
+    }
+
+    &__btn {
+        color: #337D5A;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.28px;
+        width: 235px;
+        height: 52px;
+        border: 1.5px solid #337D5A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 70px;
+
+        &:hover {
+            color: white;
+            background: #337D5A;
         }
     }
 }
@@ -2286,6 +2350,49 @@ ul {
         &__history-of-productions {
             height: 352px;
             background-position: 350px 130px;
+        }
+    }
+
+    .galery {
+        &__cards {
+
+            .cards {
+
+                &__first-line,
+                &__last-line {
+                    flex-direction: column;
+
+                    .card {
+                        max-width: 100%;
+                        width: 100%;
+                        height: 404px;
+                        margin-right: 0;
+                        margin-left: 0;
+                        margin-bottom: 30px;
+                        &__right{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &__first-line{
+                    .card {
+                        &__left{
+                            img{
+                                min-width: 335px;
+                            }
+                        }
+                        &__right{
+                            img {
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                                object-position: bottom;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
