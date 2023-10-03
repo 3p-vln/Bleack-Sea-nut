@@ -930,7 +930,7 @@ ul {
         width: 487px;
     }
 
-    &__about-info-third{
+    &__about-info-third {
         margin-top: 25px;
         width: 524px;
     }
@@ -2225,6 +2225,24 @@ ul {
     }
 }
 
+.shop-baner {
+    color: #FFF;
+    font-family: Raleway;
+    background-image: url('@img/shop-bg.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    height: 300px;
+    margin-top: 15px;
+    display: flex;
+
+    h2 {
+        font-size: 62px;
+        font-weight: 800;
+        letter-spacing: 0.62px;
+        text-align: center;
+        margin-top: 127px;
+    }
+}
 
 @media (max-width:1360px) {
     .second-line__phones {
@@ -2529,17 +2547,17 @@ ul {
 
 @media (max-width:711px) {
     .productions .product {
-        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .productions .product__price .price__before {
+        display: block;
     }
 }
 
 @media (max-width:650px) {
     .container {
         padding: 0 20px;
-    }
-
-    .productions .product__price .price__before {
-        display: block;
     }
 
     .play-block__content h1 {
