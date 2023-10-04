@@ -995,6 +995,7 @@ ul {
 
                 select {
                     width: 100%;
+                    min-width: 135px;
                     height: 100%;
                     border: 1px solid rgba(0, 0, 0, 0.10);
                     background: transparent;
@@ -1002,7 +1003,7 @@ ul {
                     font-weight: 600;
                     letter-spacing: 0.16px;
                     appearance: none;
-                    padding: 0 65px 0 15px;
+                    padding: 0 0 0 15px;
                 }
             }
 
@@ -1027,6 +1028,7 @@ ul {
 
                 select {
                     width: 100%;
+                    min-width: 110px;
                     height: 100%;
                     border: 1px solid rgba(0, 0, 0, 0.10);
                     background: transparent;
@@ -1034,7 +1036,7 @@ ul {
                     font-weight: 600;
                     letter-spacing: 0.16px;
                     appearance: none;
-                    padding: 0 65px 0 15px;
+                    padding: 0 0 0 15px;
 
                 }
             }
@@ -2495,6 +2497,23 @@ ul {
     .news__swiper {
         width: 846px;
     }
+
+    .productions__settings {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .productions__settings .settings__btns {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 47px;
+        justify-content: space-between;
+    }
+
+    .productions__settings .settings__content {
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 1165px) {
@@ -2567,6 +2586,11 @@ ul {
 
     .menu__navigate {
         padding: 0 0;
+    }
+
+    .shop-baner h2 {
+        font-size: 45px;
+        margin-top: 145px;
     }
 }
 
@@ -2723,6 +2747,23 @@ ul {
 
     .productions .product__price .price__before {
         display: block;
+    }
+
+    .productions__settings .settings__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .productions__settings .settings__title {
+        margin-right: 15px;
+    }
+
+    .productions__settings .settings__mass {
+        margin-left: 10px;
+    }
+
+    .productions__settings .settings__cost {
+        margin-left: auto;
     }
 }
 
@@ -2909,5 +2950,15 @@ ul {
                 font-size: 13px;
             }
         }
+    }
+
+    .productions__settings .settings__content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .productions__settings .settings__cost {
+        margin-left: 0;
     }
 }
