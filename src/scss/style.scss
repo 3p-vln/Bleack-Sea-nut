@@ -612,6 +612,12 @@ ul {
         padding-bottom: 91px;
     }
 
+    &__content-shop {
+        font-family: Raleway;
+        margin-top: 65px;
+        padding-bottom: 91px;
+    }
+
     &__title {
         color: #1A2F3F;
         font-size: 45px;
@@ -884,6 +890,55 @@ ul {
             }
         }
     }
+
+    &__settings {
+        display: flex;
+        justify-content: space-between;
+
+        .settings {
+            &__content {
+                display: flex;
+            }
+
+            &__btns {
+                display: flex;
+            }
+
+            &__title {
+                display: flex;
+            }
+
+            &__cost {
+                display: flex;
+                align-items: center;
+
+                .cost__arrows {
+                    display: flex;
+                }
+            }
+
+            &__title {
+                font-size: 17px;
+                font-weight: 700;
+                letter-spacing: -0.17px;
+                gap: 12px;
+                display: flex;
+                align-items: center;
+                margin-right: 67px;
+            }
+
+            &__taste {
+                width: 312px;
+                height: 48px;
+                border: 1px solid rgba(0, 0, 0, 0.10);
+                background: transparent;
+                margin-top: 5px;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 0.16px;
+            }
+        }
+    }
 }
 
 .about-the-manufacturer {
@@ -988,7 +1043,15 @@ ul {
             &-cover {
                 position: absolute;
                 top: 0;
+                width: 100%;
+                height: 100%;
                 cursor: pointer;
+            }
+
+            .background__img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -2498,25 +2561,31 @@ ul {
 
     .about-the-manufacturer {
         &__block-two {
-            width: 600px;
-            height: 405px;
+            width: 100%;
 
+            .swiper-slide{
+                height: 472px;
+            }
+            
             .block-two__background {
+                
                 .background__img {
                     width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }
 
-        &__arrows {
-            top: 347px;
-        }
+        // &__arrows {
+        //     top: 347px;
+        // }
 
         &__play {
             position: absolute;
             z-index: 5;
             top: 170px;
-            left: 270px;
+            left: 47%;
         }
     }
 
@@ -2634,7 +2703,7 @@ ul {
     }
 
     .about-the-manufacturer__block-two {
-        display: none;
+        
     }
 
     .contacts__colum-two iframe {
