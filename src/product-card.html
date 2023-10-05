@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+"title": "Карточка товара"
+})
+
+<body>
+    @@include('html/header.html')
+
+    <section class="bread-crumbs bread-crumbs_gray">
+        <div class="container">
+            <div class="bread-crumbs__content">
+                <a href="index.html" class="bread-crumbs__main">Главная</a>
+                <div class="bread-crumbs__arr">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.00001 11L6.3 10.3L10.1 6.5H0V5.50002H10.1L6.3 1.7L7.00001 1.00002L12 6.00001L7.00001 11Z"
+                            fill="white" />
+                    </svg>
+                </div>
+                <a href="product-card.html" class="bread-crumbs__page">Карточка товара</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="short-about-nut">
+        <div class="container">
+            <div class="short-about-nut__content">
+                <div class="short-about-nut__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide short-about-nut__image">
+                            <img src="@img/main/nut.png" loading="lazy">
+                        </div>
+                        <div class="swiper-slide short-about-nut__image">
+                            <img src="@img/main/nut.png" loading="lazy">
+                        </div>
+                        <div class="swiper-slide short-about-nut__image">
+                            <img src="@img/main/nut.png" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="short-about-nut__arrows">
+                        <div class="arrow__left">
+                            <img src="@img/main/left-arrow.svg" class="swiper-button-prev" loading="lazy">
+                        </div>
+                        <div class="arrow__right">
+                            <img src="@img/main/left-arrow.svg" class="swiper-button-next" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="zoom">
+                        <img src="@img/main/zoom.png" loading="lazy">
+                    </div>
+                </div>
+                <div class="short-about-nut__info">
+                    <div class="info__nut-and-art">
+                        <p class="nut">Грецкий орех</p>
+                        <p class="art">Арт: 0091</p>
+                    </div>
+                    <h2 class="info__name">Орех соленый кондитерский
+                        очищенный</h2>
+                    <div class="info__about">
+                        <div class="characteristics">
+                            <p class="name">Состав:</p>
+                            <p class="about">Ядро грецкого ореха, вымытого очищенного
+                                от кожуры, соль экстра (раствор 7%)</p>
+                        </div>
+                        <div class="characteristics">
+                            <p class="name">Масса нетто:</p>
+                            <p class="about">40г.</p>
+                        </div>
+                        <div class="characteristics">
+                            <p class="name">Энергетическая ценность:</p>
+                            <p class="about">654 Ккал.</p>
+                        </div>
+                        <div class="characteristics">
+                            <p class="name">Срок годности:</p>
+                            <p class="about">12 месяцев, с даты расфасовки
+                                (указана на упаковке)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="short-about-nut__warn">
+                        <img src="@img/warning-sigh.svg">
+                        <p>Хранить в помещениях, защищенных от попадания прямых, 
+                            солнечных лучей, при температуре от +3 °C до +20 °C, и относительной 
+                            влажности воздуха не более 75 %</p>
+                    </div>
+                    <div class="short-about-nut__price-and-order">
+                        <div class="product__price">
+                            <p class="price">Ваша цена: <span>19 <span>грн.</span></span></p>
+                            <p class="price__before"><span>21</span> грн.</p>
+                        </div>
+                        <a href="#" class="order">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('html/contacts.html')
+
+    @@include('html/footer.html')
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+
+</body>
+
+</html>

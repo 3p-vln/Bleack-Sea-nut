@@ -8,7 +8,13 @@ let menu = document.querySelector('.burger-menu__content');
 menuBtn.addEventListener('click', function () {
     menu.classList.toggle('active');
     menuBtn.classList.toggle('active');
-})
+});
+
+let zoomBtn = document.querySelector('.short-about-nut .zoom');
+let zoom = document.querySelector('.short-about-nut__swiper');
+zoomBtn.addEventListener('click', function () {
+    zoom.classList.toggle('active');
+});
 
 function initPlayVideo() {
     $(".video-cover").on("click", function () {
@@ -20,25 +26,6 @@ function initPlayVideo() {
 
 initPlayVideo();
 
-//     (function initPlayVideo() {
-//         document.getElementByClassName("video-cover").on("click", function () {
-//             this.fadeOut().siblings('.video').html(
-//                 '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt' + $(".f-video-cover").data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-//             );
-//         });
-//     })();
-// });
-
-// document.querySelector(document).ready(function (document.querySelector) {
-//     (function initPlayVideo() {
-//         document.querySelector(".video-cover").on("click", function () {
-//             document.querySelector(this).fadeOut().siblings('.video').html(
-//                 '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt' + document.querySelector(".f-video-cover").data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-//             );
-//         });
-//     })();
-// });
-
 var swiper = new Swiper(".product-swiper", {
     spaceBetween: 30,
     navigation: {
@@ -49,6 +36,15 @@ var swiper = new Swiper(".product-swiper", {
 });
 
 var swiper = new Swiper(".block-two__swiper", {
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    keyboard: true,
+});
+
+var swiper = new Swiper(".short-about-nut__swiper", {
     spaceBetween: 0,
     navigation: {
         nextEl: '.swiper-button-next',
