@@ -10,11 +10,11 @@ menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
 });
 
-let zoomBtn = document.querySelector('.short-about-nut .zoom');
-let zoom = document.querySelector('.short-about-nut__swiper');
-zoomBtn.addEventListener('click', function () {
-    zoom.classList.toggle('active');
-});
+// let zoomBtn = document.querySelector('.short-about-nut .zoom');
+// let zoom = document.querySelector('.short-about-nut');
+// zoomBtn.addEventListener('click', function () {
+//     zoom.classList.toggle('active');
+// });
 
 function initPlayVideo() {
     $(".video-cover").on("click", function () {
@@ -36,15 +36,6 @@ var swiper = new Swiper(".product-swiper", {
 });
 
 var swiper = new Swiper(".block-two__swiper", {
-    spaceBetween: 0,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    keyboard: true,
-});
-
-var swiper = new Swiper(".short-about-nut__swiper", {
     spaceBetween: 0,
     navigation: {
         nextEl: '.swiper-button-next',
@@ -75,4 +66,14 @@ var swiper = new Swiper(".news__swiper", {
             spaceBetween: 30,
         }
     }
+});
+
+
+var swiper = new Swiper(".short-about-nut__swiper", {
+    spaceBetween: 0,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    keyboard: true,
 });

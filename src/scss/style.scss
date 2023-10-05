@@ -2535,11 +2535,11 @@ ul {
         position: relative;
         margin-right: 75px;
         margin-top: 25px;
+    }
 
-        &.active {
-            .short-about-nut__image img {
-                transform: scale(2);
-            }
+    &.active {
+        .short-about-nut__image img {
+            transform: scale(2);
         }
     }
 
