@@ -10,15 +10,24 @@ menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
 })
 
-jQuery(document).ready(function ($) {
-    (function initPlayVideo() {
-        $(".video-cover").on("click", function () {
-            $(this).fadeOut().siblings('.video').html(
-                '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt' + $(".f-video-cover").data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-            );
-        });
-    })();
-});
+function initPlayVideo() {
+    $(".video-cover").on("click", function () {
+        $(this).fadeOut().siblings('.video').html(
+            '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt' + $(".f-video-cover").data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        );
+    });
+};
+
+initPlayVideo();
+
+//     (function initPlayVideo() {
+//         document.getElementByClassName("video-cover").on("click", function () {
+//             this.fadeOut().siblings('.video').html(
+//                 '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt' + $(".f-video-cover").data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+//             );
+//         });
+//     })();
+// });
 
 // document.querySelector(document).ready(function (document.querySelector) {
 //     (function initPlayVideo() {

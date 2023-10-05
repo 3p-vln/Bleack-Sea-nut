@@ -1,5 +1,19 @@
 body {
     margin: 0;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        width: 3px;
+        background: rgba(0, 0, 0, 0.10);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        background: #337D5A;
+    }
 }
 
 .container {
@@ -2411,6 +2425,89 @@ ul {
     }
 }
 
+.about-nuts {
+    color: #1A2F3F;
+    font-family: Raleway;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 105px;
+        margin-bottom: 132px;
+    }
+
+    &__title {
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 46px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 50px;
+        margin-top: 7px;
+        margin-bottom: 0;
+    }
+
+    &__text-block {
+        width: 503px;
+        height: 315px;
+        padding-right: 24px;
+        overflow-y: scroll;
+
+        p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24.5px;
+            letter-spacing: 0.16px;
+            margin-bottom: 29px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            width: 3px;
+            background: rgba(0, 0, 0, 0.10);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 50px;
+            background: #337D5A;
+        }
+    }
+
+    &__block-two {
+        width: 700px;
+        height: 472px;
+        display: flex;
+    }
+
+    &__arrows {
+        position: absolute;
+        width: 141px;
+        height: 58px;
+        background: #337d5a;
+        z-index: 20;
+        top: 415px;
+
+
+        & .arrow__right,
+        & .arrow__left {
+            position: absolute;
+            margin-left: 14px;
+        }
+
+        & .arrow__right {
+            margin-right: 14px;
+        }
+    }
+}
+
 @media (max-width:1360px) {
     .second-line__phones {
         margin-right: 45px;
@@ -2435,6 +2532,23 @@ ul {
             margin-top: 100px;
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    .about-nuts {
+        &__block-first {
+            width: 100%;
+        }
+
+        &__content {
+            margin-top: 100px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__text-block {
+            width: 100%;
+            margin-bottom: 30px;
         }
     }
 
@@ -2703,15 +2817,30 @@ ul {
             }
         }
 
-        // &__arrows {
-        //     top: 347px;
-        // }
-
         &__play {
             position: absolute;
             z-index: 5;
             top: 170px;
             left: 47%;
+        }
+    }
+
+    .about-nuts {
+        &__block-two {
+            width: 100%;
+
+            .swiper-slide {
+                height: 472px;
+            }
+
+            .block-two__background {
+
+                .background__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
         }
     }
 
