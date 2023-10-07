@@ -544,27 +544,18 @@ ul {
     display: flex;
     justify-content: center;
 
-    .video {
+    .video-cover {
         position: relative;
         overflow: hidden;
         height: 0;
         width: 100%;
-        padding-bottom: 600px;
+        height: 600px;
+        cursor: pointer;
 
-        iframe,
-        object,
-        embed {
+        iframe {
             position: absolute;
             left: 0;
             top: 0;
-            height: 100%;
-            width: 100%;
-        }
-
-        &-cover {
-            position: absolute;
-            top: 0;
-            cursor: pointer;
             height: 100%;
             width: 100%;
         }
@@ -1142,28 +1133,17 @@ ul {
         margin-top: 34px;
         position: relative;
 
-        .video {
+        .video-cover {
             position: relative;
-            overflow: hidden;
-            height: 0;
-            padding-bottom: 472px;
+            height: 472px;
+            cursor: pointer;
 
-            iframe,
-            object,
-            embed {
+            iframe{
                 position: absolute;
                 left: 0;
                 top: 0;
                 height: 100%;
                 width: 100%;
-            }
-
-            &-cover {
-                position: absolute;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                cursor: pointer;
             }
 
             .background__img {
@@ -1261,29 +1241,18 @@ ul {
     display: flex;
     justify-content: center;
 
-    .video {
+    .video-cover {
         position: relative;
-        overflow: hidden;
-        height: 0;
+        height: 740px;
         width: 100%;
-        padding-bottom: 740px;
+        cursor: pointer;
 
-        iframe,
-        object,
-        embed {
+        iframe {
             position: absolute;
             left: 0;
             top: 0;
             height: 100%;
             width: 100%;
-        }
-
-        &-cover {
-            position: absolute;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            cursor: pointer;
         }
     }
 
@@ -1570,26 +1539,19 @@ ul {
                 width: 408px;
                 height: 270px;
 
-                .video {
+                .video-cover {
                     position: relative;
-                    padding-bottom: 270px;
-                    height: 0;
-                    overflow: hidden;
+                    width: 408px;
+                    height: 270px;
+                    cursor: pointer;
 
-                    iframe,
-                    object,
-                    embed {
+                    iframe {
                         position: absolute;
                         left: 0;
                         top: 0;
                         height: 100%;
                         width: 100%;
-                    }
-
-                    &-cover {
-                        position: absolute;
-                        top: 0;
-                        cursor: pointer;
+                        z-index: 10;
                     }
                 }
             }
@@ -2242,34 +2204,19 @@ ul {
                     }
 
                     &.video-card-two {
-                        .video {
+                        .video-cover {
                             position: relative;
+                            cursor: pointer;
                             width: 100%;
-                            padding-bottom: 404px;
+                            height: 404px;
 
-                            iframe,
-                            object,
-                            embed {
+                            iframe {
                                 position: absolute;
                                 left: 0;
                                 top: 0;
                                 height: 100%;
                                 width: 100%;
                             }
-                        }
-
-                        .card__video-bg-two {
-                            background-image: url('@img/about-productions/galery6.jpg');
-                            background-size: cover;
-                            background-position: bottom center;
-                        }
-
-                        .video-cover {
-                            position: absolute;
-                            top: 0;
-                            cursor: pointer;
-                            height: 100%;
-                            width: 100%;
 
                             img {
                                 margin-top: 110px;
@@ -2295,6 +2242,12 @@ ul {
                                 }
                             }
                         }
+
+                        .card__video-bg-two {
+                            background-image: url('@img/about-productions/galery6.jpg');
+                            background-size: cover;
+                            background-position: bottom center;
+                        }
                     }
                 }
             }
@@ -2307,34 +2260,19 @@ ul {
             &.video-card-first {
                 margin-bottom: 30px;
 
-                .video {
+                .video-cover {
                     position: relative;
                     width: 100%;
-                    padding-bottom: 556px;
+                    height: 556px;
+                    cursor: pointer;
 
-                    iframe,
-                    object,
-                    embed {
+                    iframe {
                         position: absolute;
                         left: 0;
                         top: 0;
                         height: 100%;
                         width: 100%;
                     }
-                }
-
-                .card__video-bg-first {
-                    background-image: url('@img/about-productions/galery3.jpg');
-                    background-size: cover;
-                    background-position: bottom center;
-                }
-
-                .video-cover {
-                    position: absolute;
-                    top: 0;
-                    cursor: pointer;
-                    height: 100%;
-                    width: 100%;
 
                     img {
                         margin-top: 236px;
@@ -2359,6 +2297,12 @@ ul {
                             font-weight: 700;
                         }
                     }
+                }
+
+                .card__video-bg-first {
+                    background-image: url('@img/about-productions/galery3.jpg');
+                    background-size: cover;
+                    background-position: bottom center;
                 }
             }
 
@@ -2743,8 +2687,6 @@ ul {
     }
 
     .productions__settings .settings__btns {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         gap: 47px;
         justify-content: space-between;

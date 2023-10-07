@@ -10,21 +10,23 @@ menuBtn.addEventListener('click', function () {
     menuBtn.classList.toggle('active');
 });
 
-// let zoomBtn = document.querySelector('.short-about-nut .zoom');
-// let zoom = document.querySelector('.short-about-nut');
-// zoomBtn.addEventListener('click', function () {
-//     zoom.classList.toggle('active');
-// });
+var video = document.querySelectorAll('.video-cover');
 
-function initPlayVideo() {
-    $(".video-cover").on("click", function () {
-        $(this).fadeOut().siblings('.video').html(
-            '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt' + $(".f-video-cover").data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-        );
-    });
-};
+video.forEach(b=>b.addEventListener('click', function () {
+    b.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    );
+}));
 
-initPlayVideo();
+
+// function initPlayVideo() {
+//     $(".video-cover").on("click", function () {
+//         $(this).fadeOut().siblings('.video').html(
+//             '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt' + $(".f-video-cover").data("video") + '?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+//         );
+//     });
+// };
+
+// initPlayVideo();
 
 var swiper = new Swiper(".product-swiper", {
     spaceBetween: 30,
@@ -76,4 +78,11 @@ var swiper = new Swiper(".short-about-nut__swiper", {
         prevEl: '.swiper-button-prev',
     },
     keyboard: true,
+});
+
+
+let zoomBtn = document.querySelector('.short-about-nut .zoom');
+let zoom = document.querySelector('.short-about-nut');
+zoomBtn.addEventListener('click', function () {
+    zoom.classList.toggle('active');
 });
