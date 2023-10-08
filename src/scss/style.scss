@@ -2412,10 +2412,9 @@ ul {
         display: flex;
         position: absolute;
         top: 0;
-        width: 530px;
+        width: 100%;
         height: 100%;
         justify-content: space-between;
-        margin: 0 10px;
         z-index: 10;
     }
 
@@ -2459,29 +2458,131 @@ ul {
             }
 
             &__about {
-                .characteristics {
-                    display: flex;
-                    margin-bottom: 3px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+                gap: 0 30px;
 
-                    .name {
+                .name {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 17px;
+                    letter-spacing: 0.32px;
+                    max-width: 275px;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                .about {
+                    color: #5b5b5b;
+                    font-family: Montserrat;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 21px;
+                    letter-spacing: -0.35px;
+                    grid-column: 2/4;
+                }
+            }
+        }
+    }
+
+    &__warn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: #FCFCFC;
+        margin-top: 20px;
+        gap: 27px;
+        padding: 7px 20px;
+
+        p {
+            font-family: Montserrat;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 20px;
+            max-width: 562px;
+        }
+    }
+
+    &__price-and-order {
+        display: flex;
+        align-items: center;
+        margin-top: 31px;
+        gap: 32px;
+
+        .product__price {
+            display: flex;
+            margin-left: auto;
+
+            .price {
+                color: #1A2F3F;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: 0.15px;
+
+                span {
+                    color: #337D5A;
+                    font-size: 24px;
+                    font-weight: 600;
+                    letter-spacing: 0.2px;
+                    margin-left: 4px;
+
+                    span {
+                        color: #337D5A;
                         font-size: 16px;
-                        font-weight: 700;
-                        line-height: 17px;
-                        letter-spacing: 0.32px;
-                        max-width: 275px;
-                        width: 100%;
-                    }
-
-                    .about {
-                        color: #5b5b5b;
-                        font-family: Montserrat;
-                        font-size: 15px;
-                        font-weight: 500;
-                        line-height: 21px;
-                        letter-spacing: -0.35px;
-                        max-width: 355px;
+                        font-weight: 600;
+                        letter-spacing: 0.2px;
+                        margin-left: -1px;
                     }
                 }
+
+                &__before {
+                    color: #1A2F3F;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    letter-spacing: 0.13px;
+                    margin-left: 9px;
+                    margin-top: 24px;
+
+                    span {
+                        font-size: 18px;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 49px;
+                        height: 1px;
+                        background: #8A8A8A;
+                        margin-top: 10px;
+                    }
+                }
+
+            }
+        }
+
+        .order {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 190px;
+            height: 52px;
+            border: 1px solid #337D5A;
+            background: #337D5A;
+            color: white;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.14px;
+
+            &:hover{
+                color: #337D5A;
+                background: transparent;
             }
         }
     }
@@ -2656,9 +2757,32 @@ ul {
     }
 }
 
-@media (max-width: 1165px) {
+@media (max-width: 1176px) {
     .productions .product__price .price__before {
         display: none;
+    }
+
+    .short-about-nut{
+        &__content {
+            flex-wrap: wrap;
+        }
+
+        &__swiper{
+            margin-right: auto;
+        }
+
+        &__info{
+            width: 100%;
+            .info{
+                &__about {
+                    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+                }
+            }
+        }
+
+        &__warn p {
+            max-width: 1000px;
+        }
     }
 }
 
@@ -2828,6 +2952,7 @@ ul {
     .about-benefits__nuts {
         grid-template-columns: 1fr;
     }
+
     .about-benefits__info {
         max-width: 455px;
     }
@@ -3007,8 +3132,6 @@ ul {
         }
     }
 
-    .about-the-manufacturer__block-two {}
-
     .contacts__colum-two iframe {
         width: 375px;
         height: 375px;
@@ -3034,6 +3157,48 @@ ul {
             height: 465px;
             background-position: 185px 240px;
             padding: 10px 20px;
+        }
+    }
+
+    .short-about-nut{
+        &__info {
+            .info{
+                &__about {
+                    grid-template-columns: repeat(auto-fit,minmax(123px,1fr));
+                }
+            }
+        }
+
+        &__price-and-order {
+            gap: 10px;
+            justify-content: space-between;
+            .product__price {
+                margin-left: 0;
+                .price {
+                    font-size: 15px;
+
+                    span{
+                        font-size: 18px;
+
+                        span{
+                            font-size: 13px;
+                        }
+                    }
+
+                    &__before{
+                        font-size: 13px;
+                        margin-top: 18px;
+
+                        span{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .order{
+                width: 90px;
+            }
         }
     }
 
