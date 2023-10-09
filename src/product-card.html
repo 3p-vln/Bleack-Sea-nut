@@ -102,7 +102,7 @@
 
                 <div class="tabs__item" id="tab_1">
                     <div class="item__img">
-                        <img src="@img/about-product.jpg">
+                        <img src="@img/about-product.jpg" class="bg">
                     </div>
                     <div class="item__info">
                         <p>Уже 4000 лет люди питаются ценными <span>грецкими орехами.</span> Они особенно полезны
@@ -145,7 +145,7 @@
 
                 <div class="tabs__item" id="tab_2">
                     <div class="item__img">
-                        <img src="img/main/eco-bg.jpg">
+                        <img src="img/main/eco-bg.jpg" class="bg">
                     </div>
                     <div class="item__info">
                         <p>Вся наша продукция продается в <span>вакуумных упаковках.</span> Это не только защита от
@@ -160,7 +160,7 @@
 
                 <div class="tabs__item" id="tab_3">
                     <div class="item__img">
-                        <img src="@img/pay.jpg">
+                        <img src="@img/pay.jpg" class="bg">
                     </div>
                     <div class="item__info">
                         <p><b>Способы оплаты</b></p>
@@ -185,7 +185,7 @@
 
                 <div class="tabs__item" id="tab_4">
                     <div class="item__img">
-                        <img src="@img/delivery.jpg">
+                        <img src="@img/delivery.jpg" class="bg">
                     </div>
                     <div class="item__info">
                         <p>Доставка нашей продукции производится <span>по всем городам Украины.</span></p>
@@ -212,6 +212,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
+    <script>
+        const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
+        const tabsItems = document.querySelectorAll(".tabs__item");
+
+        tabsBtn.forEach(item => {
+            item.addEventListener("click", function () {
+                const currentBtn = item;
+                const tabId = currentBtn.getAttribute("data-tab");
+                const currentTab = document.querySelector(tabId);
+
+                if (!currentBtn.classList.contains('active')) {
+                    tabsBtn.forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+
+                    tabsItems.forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+
+                    currentBtn.classList.add('active');
+                    currentTab.classList.add('active');
+                }
+            });
+        })
+
+        document.querySelector('.tabs__nav-btn').click();
+    </script>
 
 </body>
 

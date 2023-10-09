@@ -107,7 +107,7 @@
                 <nav class="menu__navigate">
                     <a href="shop.html" class="nav-item item1">Магазин</a>
                     <a href="about-productions.html" class="nav-item item2">О производстве</a>
-                    <a href="#" class="nav-item item3">Оплата и доставка</a>
+                    <a href="pay-and-delivery.html" class="nav-item item3">Оплата и доставка</a>
                     <a href="#" class="nav-item item4">Оптовым и корпоративным клиентам</a>
                     <a href="#" class="nav-item item5">Новости и статьи</a>
                     <a href="#contacts" class="nav-item item6">Контакты</a>
@@ -188,7 +188,7 @@
                 <nav class="menu__navigate">
                     <a href="shop.html" class="nav-item">Магазин</a>
                     <a href="about-productions.html" class="nav-item nav-item-2">О производстве</a>
-                    <a href="#" class="nav-item nav-item-3">Оплата и доставка</a>
+                    <a href="pay-and-delivery.html" class="nav-item nav-item-3">Оплата и доставка</a>
                     <a href="#" class="nav-item nav-item-4">Оптовым и корпоративным клиентам</a>
                     <a href="#" class="nav-item nav-item-5">Новости и статьи</a>
                     <a href="#contacts" class="nav-item nav-item-6">Контакты</a>
@@ -309,7 +309,7 @@
 
                 <div class="tabs__item" id="tab_1">
                     <div class="item__img">
-                        <picture><source srcset="img/about-product.webp" type="image/webp"><img src="img/about-product.jpg"></picture>
+                        <picture><source srcset="img/about-product.webp" type="image/webp"><img src="img/about-product.jpg" class="bg"></picture>
                     </div>
                     <div class="item__info">
                         <p>Уже 4000 лет люди питаются ценными <span>грецкими орехами.</span> Они особенно полезны
@@ -352,7 +352,7 @@
 
                 <div class="tabs__item" id="tab_2">
                     <div class="item__img">
-                        <picture><source srcset="img/main/eco-bg.webp" type="image/webp"><img src="img/main/eco-bg.jpg"></picture>
+                        <picture><source srcset="img/main/eco-bg.webp" type="image/webp"><img src="img/main/eco-bg.jpg" class="bg"></picture>
                     </div>
                     <div class="item__info">
                         <p>Вся наша продукция продается в <span>вакуумных упаковках.</span> Это не только защита от
@@ -367,7 +367,7 @@
 
                 <div class="tabs__item" id="tab_3">
                     <div class="item__img">
-                        <picture><source srcset="img/pay.webp" type="image/webp"><img src="img/pay.jpg"></picture>
+                        <picture><source srcset="img/pay.webp" type="image/webp"><img src="img/pay.jpg" class="bg"></picture>
                     </div>
                     <div class="item__info">
                         <p><b>Способы оплаты</b></p>
@@ -392,7 +392,7 @@
 
                 <div class="tabs__item" id="tab_4">
                     <div class="item__img">
-                        <picture><source srcset="img/delivery.webp" type="image/webp"><img src="img/delivery.jpg"></picture>
+                        <picture><source srcset="img/delivery.webp" type="image/webp"><img src="img/delivery.jpg" class="bg"></picture>
                     </div>
                     <div class="item__info">
                         <p>Доставка нашей продукции производится <span>по всем городам Украины.</span></p>
@@ -484,8 +484,8 @@
                 <ul class="menu__content">
                     <li class="menu__item"><a href="shop.html">Магазин</a></li>
                     <li class="menu__item"><a href="#">Корпоративным клиентам</a></li>
-                    <li class="menu__item"><a href="#">Оплата и доставка</a></li>
-                    <li class="menu__item"><a href="#">О производстве</a></li>
+                    <li class="menu__item"><a href="pay-and-delivery.html">Оплата и доставка</a></li>
+                    <li class="menu__item"><a href="about-productions.html">О производстве</a></li>
                     <li class="menu__item"><a href="#">Новости и статьи</a></li>
                     <li class="menu__item"><a href="all-gallery.html">Галерея</a></li>
                 </ul>
@@ -535,6 +535,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
+    <script>
+        const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
+        const tabsItems = document.querySelectorAll(".tabs__item");
+
+        tabsBtn.forEach(item => {
+            item.addEventListener("click", function () {
+                const currentBtn = item;
+                const tabId = currentBtn.getAttribute("data-tab");
+                const currentTab = document.querySelector(tabId);
+
+                if (!currentBtn.classList.contains('active')) {
+                    tabsBtn.forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+
+                    tabsItems.forEach(function (item) {
+                        item.classList.remove('active');
+                    });
+
+                    currentBtn.classList.add('active');
+                    currentTab.classList.add('active');
+                }
+            });
+        })
+
+        document.querySelector('.tabs__nav-btn').click();
+    </script>
 
 </body>
 
