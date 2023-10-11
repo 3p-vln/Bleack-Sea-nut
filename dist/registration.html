@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карточка товара</title>
+    <title>Регистрация</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -226,192 +225,110 @@
                             fill="white" />
                     </svg>
                 </div>
-                <a href="product-card.html" class="bread-crumbs__page">Карточка товара</a>
+                <a href="product-card.html" class="bread-crumbs__page">Регистрация</a>
             </div>
         </div>
     </section>
 
-    <section class="short-about-nut">
+    <section class="registration">
         <div class="container">
-            <div class="short-about-nut__content">
-                <div class="short-about-nut__swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide short-about-nut__image">
-                            <picture><source srcset="img/main/nut.webp" type="image/webp"><img src="img/main/nut.png" loading="lazy"></picture>
-                        </div>
-                        <div class="swiper-slide short-about-nut__image">
-                            <picture><source srcset="img/main/nut.webp" type="image/webp"><img src="img/main/nut.png" loading="lazy"></picture>
-                        </div>
-                        <div class="swiper-slide short-about-nut__image">
-                            <picture><source srcset="img/main/nut.webp" type="image/webp"><img src="img/main/nut.png" loading="lazy"></picture>
-                        </div>
+            <h1 class="registration__title">Регистрация</h1>
+            <div class="registration__content">
+                <div class="registration__colum registration__colum_left">
+                    <h2 class="registration__item">1. Контактные данные</h2>
+                    <div class="tabs__nav registration__tabs">
+                        <button class="tabs__nav-btn" type="button" data-tab="#tab_1">
+                            Физическое лицо </button>
+                        <button class="tabs__nav-btn" type="button" data-tab="#tab_2">
+                            Юридическое лицо </button>
                     </div>
-                    <div class="short-about-nut__arrows">
-                        <div class="arrow__left">
-                            <img src="img/main/left-arrow.svg" class="swiper-button-prev" loading="lazy">
+                    <form class="registration__form form_first">
+                        <input type="text" placeholder="ФИО*">
+                        <input type="email" placeholder="Email*">
+                        <input type="tel" placeholder="Телефон*">
+                    </form>
+
+                    <h2 class="registration__item">2. Адрес</h2>
+                    <form class="registration__form form_two">
+                        <select name="country">
+                            <option value="country_1">Страна</option>
+                            <option value="country_2">Украина</option>
+                        </select>
+                        <select name="obl">
+                            <option value="obl_1">Область</option>
+                            <option value="obl_2">Киевская</option>
+                            <option value="obl_3">Львовская</option>
+                            <option value="obl_3">Сумская</option>
+                            <option value="obl_3">Харьковская</option>
+                        </select>
+                        <input type="text" placeholder="Город*">
+                        <input type="text" placeholder="Адрес">
+                    </form>
+
+                    <h2 class="registration__item">3. Пароль</h2>
+                    <form class="registration__form form_third">
+                        <input type="password" placeholder="Новый пароль*">
+                        <input type="password" placeholder="Подтвердите новый пароль*">
+                    </form>
+
+                    <form class="registration__agry">
+                        <input type="checkbox" id="agry">
+                        <label for="agry">Я согласен с <a href="#"> Условиями регистрации</a></label>
+                    </form>
+
+                    <a href="#" class="registration__btn">Продолжить</a>
+                </div>
+
+                <div class="registration__colum registration__colum_right">
+                    <form id="upload-container" class="registration__form registration__form_upload">
+                        <input id="file-input" type="file" name="file" multiple>
+                        <label for="file-input">Загрузить фото</label>
+                    </form>
+                    <div class="tabs__content registration__tabs">
+                        <div class="tabs__item" id="tab_1">
+                            <input type="checkbox" id="fiz-fop">
+                            <label for="fiz-fop">Являюсь ФОП</label>
                         </div>
-                        <div class="arrow__right">
-                            <img src="img/main/left-arrow.svg" class="swiper-button-next" loading="lazy">
+                        <div class="tabs__item" id="tab_2">
+                            <div class="registration__radio-btn">
+                                <input type="radio" id="ur">
+                                <label for="ur">Юр. лицо</label>
+                            </div>
+                            <div class="registration__radio-btn">
+                                <input type="radio" id="company">
+                                <label for="company">ФОП</label>
+                            </div>
+
+                            <h2 class="registration__item">1. Реквизиты</h2>
+                            <form class="registration__form form_four">
+                                <input type="text" placeholder="ОКПО">
+                            </form>
+
+                            <h2 class="registration__item">2. Юридический адрес</h2>
+                            <form class="registration__form form_two">
+                                <select name="country">
+                                    <option value="country_1">Страна</option>
+                                    <option value="country_2">Украина</option>
+                                </select>
+                                <select name="obl">
+                                    <option value="obl_1">Область</option>
+                                    <option value="obl_2">Киевская</option>
+                                    <option value="obl_3">Львовская</option>
+                                    <option value="obl_3">Сумская</option>
+                                    <option value="obl_3">Харьковская</option>
+                                </select>
+                                <input type="text" placeholder="Город*">
+                                <input type="text" placeholder="Адрес">
+                                <input type="text" placeholder="Индекс">
+                            </form>
                         </div>
-                    </div>
-                    <div class="zoom">
-                        <picture><source srcset="img/main/zoom.webp" type="image/webp"><img src="img/main/zoom.png" loading="lazy"></picture>
                     </div>
                 </div>
-                <div class="short-about-nut__info">
-                    <div class="info__nut-and-art">
-                        <p class="nut">Грецкий орех</p>
-                        <p class="art">Арт: 0091</p>
-                    </div>
-                    <h2 class="info__name">Орех соленый кондитерский
-                        очищенный</h2>
-                    <div class="info__about">
-                        <p class="name">Состав:</p>
-                        <p class="about">Ядро грецкого ореха, вымытого очищенного
-                            от кожуры, соль экстра (раствор 7%)</p>
-                        <p class="name">Масса нетто:</p>
-                        <p class="about">40г.</p>
-                        <p class="name">Энергетическая ценность:</p>
-                        <p class="about">654 Ккал.</p>
-                        <p class="name">Срок годности:</p>
-                        <p class="about">12 месяцев, с даты расфасовки
-                            (указана на упаковке)
-                        </p>
-                    </div>
-                    <div class="short-about-nut__warn">
-                        <img src="img/warning-sigh.svg">
-                        <p>Хранить в помещениях, защищенных от попадания прямых,
-                            солнечных лучей, при температуре от +3 °C до +20 °C, и относительной
-                            влажности воздуха не более 75 %</p>
-                    </div>
-                    <div class="short-about-nut__price-and-order">
-                        <div class="product__price">
-                            <p class="price">Ваша цена: <span>19 <span>грн.</span></span></p>
-                            <p class="price__before"><span>21</span> грн.</p>
-                        </div>
-                        <a href="#" class="order">Заказать</a>
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </section>
-
-    <div class="tabs">
-        <div class="container">
-            <div class="tabs__nav">
-                <button class="tabs__nav-btn" type="button" data-tab="#tab_1">Описание</button>
-                <button class="tabs__nav-btn" type="button" data-tab="#tab_2">Упаковка</button>
-                <button class="tabs__nav-btn" type="button" data-tab="#tab_3">Оплата</button>
-                <button class="tabs__nav-btn" type="button" data-tab="#tab_4">Доставка</button>
-            </div>
-
-            <div class="tabs__content">
-
-                <div class="tabs__item" id="tab_1">
-                    <div class="item__img">
-                        <picture><source srcset="img/about-product.webp" type="image/webp"><img src="img/about-product.jpg" class="bg"></picture>
-                    </div>
-                    <div class="item__info">
-                        <p>Уже 4000 лет люди питаются ценными <span>грецкими орехами.</span> Они особенно полезны
-                            послеоперационным
-                            больным,
-                            детям, кормящим, беременным женщинам. Чтобы вернуть силы, укрепить иммунитет, одолеть
-                            туберкулез, кашель;
-                            грецкий орех очищенный, отборный нужно истолочь, смешать с медом (2:1) и чайную ложку
-                            целебной
-                            смеси
-                            употреблять перед едой.
-                        </p>
-
-                        <p>В белке грецких орехов много (15 %) аргинина. Он особенно нужен детям, больным, пожилым
-                            людям,
-                            в организме
-                            которых аминокислота плохо синтезируется. Аргинин помогает сосудам регенерировать,
-                            а всему организму –
-                            победить воспаления.</p>
-
-                        <p>Другие полезные вещества грецких орехов:</p>
-
-                        <ul>
-                            <li>Антиоксиданты защищают печень от повреждений</li>
-                            <li>Полифенолы не дают образоваться сосудистым тромбам</li>
-                            <li>Нейропротекторы улучшают работу мозга, отодвигают старость</li>
-                        </ul>
-
-                        <p>Нужно систематически есть грецкие орехи, чтобы:</p>
-
-                        <ul>
-                            <li>На 30–40 % снизить риск заболевания раком простаты</li>
-                            <li>На 50 % – раком молочной железы</li>
-                            <li>Предотвратить дегенерацию глазной макулы, а значит, улучшить зрение</li>
-                            <li>Отрегулировать обмен веществ, выработку инсулина; понизить количество сахара в крови
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tabs__item" id="tab_2">
-                    <div class="item__img">
-                        <picture><source srcset="img/main/eco-bg.webp" type="image/webp"><img src="img/main/eco-bg.jpg" class="bg"></picture>
-                    </div>
-                    <div class="item__info">
-                        <p>Вся наша продукция продается в <span>вакуумных упаковках.</span> Это не только защита от
-                            влаги или грязи, но и гарант того, что орех не будет контактировать с
-                            кислородом и прогоркать. Вакуумирование орехов так же помогает защитить продукт от
-                            насекомых. Например, гусениц зерновой моли или мучной огневки или разных жучков.</p>
-                        <p>Вакуумирование ядра грецкого ореха – лучший вариант упаковки. Оно предотвращает окисление
-                            ядра, не дает ядру высохнуть, замедляет процесс потери
-                            полезных свойств, увеличивает срок хранения и позволяет легко транспортировать продукт.</p>
-                    </div>
-                </div>
-
-                <div class="tabs__item" id="tab_3">
-                    <div class="item__img">
-                        <picture><source srcset="img/pay.webp" type="image/webp"><img src="img/pay.jpg" class="bg"></picture>
-                    </div>
-                    <div class="item__info">
-                        <p><b>Способы оплаты</b></p>
-                        <ul>
-                            <li><i>Безналичный расчет</i>
-                                <br>Вы можете выбрать “получить реквизиты”
-                                для дальнейшей оплаты на карту, или в терминалах.
-                            </li>
-                            <br>
-                            <li><i>Оплата с помощью банковской карты</i>
-                                <br>Оплатите Ваш заказ картой любого банка онлайн
-                                (LiqPay/Приват24)
-                            </li>
-                            <br>
-                            <li><i>Наличный расчет</i>
-                                <br>Оплата заказов наложенным платежом в отделении
-                                Новой Почты, или наличными курьерами
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="tabs__item" id="tab_4">
-                    <div class="item__img">
-                        <picture><source srcset="img/delivery.webp" type="image/webp"><img src="img/delivery.jpg" class="bg"></picture>
-                    </div>
-                    <div class="item__info">
-                        <p>Доставка нашей продукции производится <span>по всем городам Украины.</span></p>
-
-                        <p>Мы осуществляем доставку с помошью:</p>
-                        <ul>
-                            <li>УкрПочта</li>
-                            <li>Новая Почта</li>
-                            <li>Meest</li>
-                            <li>Justin</li>
-                        </ul>
-
-                        <p>Заказы суммой до 500 грн. отправляются <span>наложенным платежом.</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section class="contacts" id="contacts">
     <div class="container">
         <div class="contacts__content">
