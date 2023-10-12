@@ -59,8 +59,8 @@
                     <p>Ваша персональная скидка - 5%</p>
                 </div>
                 <div class="first-line__login-and-registration">
-                    <a href="#" class="first-line__login"><img src="img/man-user.svg" loading="lazy"> Вход</a>
-                    <a href="#" class="first-line__registration">Регистрация</a>
+                    <a href="entry.html" class="first-line__login"><img src="img/man-user.svg" loading="lazy"> Вход</a>
+                    <a href="registration.html" class="first-line__registration">Регистрация</a>
                     <select name="language" class="first-line__language">
                         <option value="language_1">Ru</option>
                         <option value="language_2">Ua</option>
@@ -146,8 +146,8 @@
             <nav class="burger-menu__content">
                 <div class="burger-menu__first-line">
                     <div class="first-line__login-and-registration">
-                        <a href="#" class="first-line__login"><img src="img/man-user.svg" loading="lazy"> Вход</a>
-                        <a href="#" class="first-line__registration">Регистрация</a>
+                        <a href="entry.html" class="first-line__login"><img src="img/man-user.svg" loading="lazy"> Вход</a>
+                        <a href="registration.html" class="first-line__registration">Регистрация</a>
                     </div>
                     <div class="first-line__social">
                         <a href="#" class="facebook"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"
@@ -535,33 +535,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
-    <script>
-        const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
-        const tabsItems = document.querySelectorAll(".tabs__item");
-
-        tabsBtn.forEach(item => {
-            item.addEventListener("click", function () {
-                const currentBtn = item;
-                const tabId = currentBtn.getAttribute("data-tab");
-                const currentTab = document.querySelector(tabId);
-
-                if (!currentBtn.classList.contains('active')) {
-                    tabsBtn.forEach(function (item) {
-                        item.classList.remove('active');
-                    });
-
-                    tabsItems.forEach(function (item) {
-                        item.classList.remove('active');
-                    });
-
-                    currentBtn.classList.add('active');
-                    currentTab.classList.add('active');
-                }
-            });
-        })
-
-        document.querySelector('.tabs__nav-btn').click();
-    </script>
+    <script src="js/tabs.js"></script>
 
 </body>
 
