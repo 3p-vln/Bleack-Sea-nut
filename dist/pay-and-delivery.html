@@ -557,33 +557,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
-    <script>
-        const tabsBtn = document.querySelectorAll(".tabs__nav-btn");
-        const tabsItems = document.querySelectorAll(".tabs__item");
+    <script src="js/tabs.js"></script>
 
-        tabsBtn.forEach(item => {
-            item.addEventListener("click", function () {
-                const currentBtn = item;
-                const tabId = currentBtn.getAttribute("data-tab");
-                const currentTab = document.querySelector(tabId);
-
-                if (!currentBtn.classList.contains('active')) {
-                    tabsBtn.forEach(function (item) {
-                        item.classList.remove('active');
-                    });
-
-                    tabsItems.forEach(function (item) {
-                        item.classList.remove('active');
-                    });
-
-                    currentBtn.classList.add('active');
-                    currentTab.classList.add('active');
-                }
-            });
-        })
-
-        document.querySelector('.tabs__nav-btn').click();
-    </script>
 </body>
 
 </html>
