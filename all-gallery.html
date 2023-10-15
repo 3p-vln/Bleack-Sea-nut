@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <header class="header">
+    <div class="wrapper">
+        <header class="header">
     <div class="first-line">
         <div class="container">
             <div class="first-line__content">
@@ -215,16 +216,17 @@
     </div>
 </section>
 
-    <section class="gallery-baner">
-        <div class="container">
-            <div class="gallery-baner__content">
-                <h1 class="gallery-baner__title">Галерея</h1>
-                <p class="gallery-baner__text">Кадры социальной активности компании</p>
-            </div>
-        </div>
-    </section>
+        <div class="main">
+            <section class="gallery-baner">
+                <div class="container">
+                    <div class="gallery-baner__content">
+                        <h1 class="gallery-baner__title">Галерея</h1>
+                        <p class="gallery-baner__text">Кадры социальной активности компании</p>
+                    </div>
+                </div>
+            </section>
 
-    <section class="bread-crumbs">
+            <section class="bread-crumbs">
     <div class="container">
         <div class="bread-crumbs__content">
             <a href="index.html" class="bread-crumbs__main">Главная</a>
@@ -234,10 +236,10 @@
     </div>
 </section>
 
-    <section class="galery-two">
-        <div class="container">
-            <div class="galery-two__content">
-                <div class="galery__cards">
+            <section class="galery-two">
+                <div class="container">
+                    <div class="galery-two__content">
+                        <div class="galery__cards">
 
     <div class="card card__left first-line">
         <picture><source srcset="img/about-productions/galery1.webp" type="image/webp"><img src="img/about-productions/galery1.jpg" class="card__bg"></picture>
@@ -306,8 +308,8 @@
         </div>
     </div>
 </div>
-                <div class="galery__reverse">
-                    <div class="galery__cards">
+                        <div class="galery__reverse">
+                            <div class="galery__cards">
 
     <div class="card card__left first-line">
         <picture><source srcset="img/about-productions/galery1.webp" type="image/webp"><img src="img/about-productions/galery1.jpg" class="card__bg"></picture>
@@ -376,13 +378,14 @@
         </div>
     </div>
 </div>
+                        </div>
+                        <a href="all-gallery.html" class="galery__btn">Посмотреть еще</a>
+                    </div>
                 </div>
-                <a href="all-gallery.html" class="galery__btn">Посмотреть еще</a>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section class="contacts" id="contacts">
+        </div>
+        <section class="contacts" id="contacts">
     <div class="container">
         <div class="contacts__content">
             <div class="contacts__colum-first">
@@ -441,7 +444,7 @@
     </div>
 </section>
 
-    <footer class="footer">
+        <footer class="footer">
     <div class="container">
         <div class="footer__content">
             <div class="footer__menu">
@@ -501,6 +504,7 @@
         </div>
     </div>
 </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>

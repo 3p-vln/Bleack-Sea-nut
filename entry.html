@@ -14,7 +14,8 @@
         
 </head>
 <body>
-    <header class="header">
+    <div class="wrapper">
+        <header class="header">
     <div class="first-line">
         <div class="container">
             <div class="first-line__content">
@@ -213,36 +214,37 @@
     </div>
 </section>
 
-    <section class="bread-crumbs bread-crumbs_gray">
-        <div class="container">
-            <div class="bread-crumbs__content">
-                <a href="index.html" class="bread-crumbs__main">Главная</a>
-                <div class="bread-crumbs__arr">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.00001 11L6.3 10.3L10.1 6.5H0V5.50002H10.1L6.3 1.7L7.00001 1.00002L12 6.00001L7.00001 11Z"
-                            fill="white" />
-                    </svg>
+        <div class="main">
+            <section class="bread-crumbs bread-crumbs_gray">
+                <div class="container">
+                    <div class="bread-crumbs__content">
+                        <a href="index.html" class="bread-crumbs__main">Главная</a>
+                        <div class="bread-crumbs__arr">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.00001 11L6.3 10.3L10.1 6.5H0V5.50002H10.1L6.3 1.7L7.00001 1.00002L12 6.00001L7.00001 11Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <a href="product-card.html" class="bread-crumbs__page">Вход</a>
+                    </div>
                 </div>
-                <a href="product-card.html" class="bread-crumbs__page">Вход</a>
-            </div>
+            </section>
+        
+            <section class="entry-form">
+                <div class="container">
+                    <form class="entry-form__content">
+                        <h2>Войти в личный кабинет</h2>
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Пароль">
+                        <a href="miss-password.html" class="entry-form__miss-password"> Забыли пароль?</a>
+                        <a href="#" class="entry-form__btn">Войти</a>
+                        <a href="registration.html" class="entry-form__registration">Регистрация</a>    
+                    </form>
+                </div>
+            </section>        
         </div>
-    </section>
-
-    <section class="entry-form">
-        <div class="container">
-            <form class="entry-form__content">
-                <h2>Войти в личный кабинет</h2>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Пароль">
-                <a href="miss-password.html" class="entry-form__miss-password"> Забыли пароль?</a>
-                <a href="#" class="entry-form__btn">Войти</a>
-                <a href="registration.html" class="entry-form__registration">Регистрация</a>    
-            </form>
-        </div>
-    </section>
-
-    <section class="contacts" id="contacts">
+        <section class="contacts" id="contacts">
     <div class="container">
         <div class="contacts__content">
             <div class="contacts__colum-first">
@@ -301,7 +303,7 @@
     </div>
 </section>
 
-    <footer class="footer">
+        <footer class="footer">
     <div class="container">
         <div class="footer__content">
             <div class="footer__menu">
@@ -360,9 +362,9 @@
             </div>
         </div>
     </div>
-</footer>
+</footer>    
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 
 </body>
