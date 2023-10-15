@@ -4,42 +4,44 @@
         "title": "Вход"
         })
 <body>
-    @@include('html/header.html')
+    <div class="wrapper">
+        @@include('html/header.html')
 
-    <section class="bread-crumbs bread-crumbs_gray">
-        <div class="container">
-            <div class="bread-crumbs__content">
-                <a href="index.html" class="bread-crumbs__main">Главная</a>
-                <div class="bread-crumbs__arr">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.00001 11L6.3 10.3L10.1 6.5H0V5.50002H10.1L6.3 1.7L7.00001 1.00002L12 6.00001L7.00001 11Z"
-                            fill="white" />
-                    </svg>
+        <div class="main">
+            <section class="bread-crumbs bread-crumbs_gray">
+                <div class="container">
+                    <div class="bread-crumbs__content">
+                        <a href="index.html" class="bread-crumbs__main">Главная</a>
+                        <div class="bread-crumbs__arr">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.00001 11L6.3 10.3L10.1 6.5H0V5.50002H10.1L6.3 1.7L7.00001 1.00002L12 6.00001L7.00001 11Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <a href="product-card.html" class="bread-crumbs__page">Вход</a>
+                    </div>
                 </div>
-                <a href="product-card.html" class="bread-crumbs__page">Вход</a>
-            </div>
+            </section>
+        
+            <section class="entry-form">
+                <div class="container">
+                    <form class="entry-form__content">
+                        <h2>Войти в личный кабинет</h2>
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Пароль">
+                        <a href="miss-password.html" class="entry-form__miss-password"> Забыли пароль?</a>
+                        <a href="#" class="entry-form__btn">Войти</a>
+                        <a href="registration.html" class="entry-form__registration">Регистрация</a>    
+                    </form>
+                </div>
+            </section>        
         </div>
-    </section>
+        @@include('html/contacts.html')
 
-    <section class="entry-form">
-        <div class="container">
-            <form class="entry-form__content">
-                <h2>Войти в личный кабинет</h2>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Пароль">
-                <a href="miss-password.html" class="entry-form__miss-password"> Забыли пароль?</a>
-                <a href="#" class="entry-form__btn">Войти</a>
-                <a href="registration.html" class="entry-form__registration">Регистрация</a>    
-            </form>
-        </div>
-    </section>
+        @@include('html/footer.html')    
+    </div>
 
-    @@include('html/contacts.html')
-
-    @@include('html/footer.html')
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 
 </body>

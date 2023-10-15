@@ -12,7 +12,7 @@ menuBtn.addEventListener('click', function () {
 
 var video = document.querySelectorAll('.video-cover');
 
-video.forEach(b=>b.addEventListener('click', function () {
+video.forEach(b => b.addEventListener('click', function () {
     b.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     );
 }));
@@ -75,3 +75,27 @@ let zoom = document.querySelector('.short-about-nut');
 zoomBtn.addEventListener('click', function () {
     zoom.classList.toggle('active');
 });
+
+
+const radioBtn = document.querySelectorAll(".registration__radio-btn");
+const radioItems = document.querySelectorAll(".radio__item");
+radioBtn.forEach(item => {
+    item.addEventListener("click", function (){
+        const currentRadioBtn = item;
+        const radioId = currentBtn.getAttribute("data-radio");
+        const currentRadio = document.querySelector(radioId);
+
+        if (!currentRadioBtn.classList.contains('active')) {
+            radioBtn.forEach(function (item) {
+                item.classList.remove('active');
+            });
+
+            radioItems.forEach(function (item) {
+                item.classList.remove('active');
+            });
+
+            currentRadioBtn.classList.add('active');
+            currentRadio.classList.add('active');
+        }
+    }
+)});

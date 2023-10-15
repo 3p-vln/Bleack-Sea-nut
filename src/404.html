@@ -6,32 +6,34 @@
 })
 
 <body>
-    @@include('html/header.html')
+    <div class="wrapper">
+        @@include('html/header.html')
 
-    <div class="not-found">
-        <div class="container">
-            <div class="not-found__content">
-                <div class="not-found__img">
-                    <img src="img/404.png">
+        <div class="main">
+            <div class="not-found">
+                <div class="container">
+                    <div class="not-found__content">
+                        <div class="not-found__img">
+                            <img src="img/404.png">
+                        </div>
+                        <p>Страница не найдена</p>
+                        <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 14 14" fill="none">
+                                <path
+                                    d="M5.83332 12.8335L6.65 12.0168L2.21665 7.5835H14V6.41685H2.21665L6.65 1.9835L5.83332 1.16685L0 7.00017L5.83332 12.8335Z"
+                                    fill="#337D5A" />
+                            </svg>
+                            Вернуться на Главную страницу
+                        </a>
+                    </div>
                 </div>
-                <p>Страница не найдена</p>
-                <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                        fill="none">
-                        <path
-                            d="M5.83332 12.8335L6.65 12.0168L2.21665 7.5835H14V6.41685H2.21665L6.65 1.9835L5.83332 1.16685L0 7.00017L5.83332 12.8335Z"
-                            fill="#337D5A" />
-                    </svg>
-                    Вернуться на Главную страницу
-                </a>
             </div>
         </div>
+        @@include('html/contacts.html')
+
+        @@include('html/footer.html')
     </div>
 
-    @@include('html/contacts.html')
-
-    @@include('html/footer.html')
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 

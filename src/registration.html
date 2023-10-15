@@ -5,177 +5,178 @@
 })
 
 <body>
-    @@include('html/header.html')
+    <div class="wrapper">
+        @@include('html/header.html')
 
-    <section class="bread-crumbs bread-crumbs_gray">
-        <div class="container">
-            <div class="bread-crumbs__content">
-                <a href="index.html" class="bread-crumbs__main">Главная</a>
-                <div class="bread-crumbs__arr">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.00001 11L6.3 10.3L10.1 6.5H0V5.50002H10.1L6.3 1.7L7.00001 1.00002L12 6.00001L7.00001 11Z"
-                            fill="white" />
-                    </svg>
-                </div>
-                <a href="product-card.html" class="bread-crumbs__page">Регистрация</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="registration">
-        <div class="container">
-            <h1 class="registration__title">Регистрация</h1>
-            <div class="registration__content">
-                <div class="registration__colum registration__colum_left">
-                    <h2 class="registration__item">1. Контактные данные</h2>
-                    <div class="tabs__nav registration__tabs">
-                        <button class="tabs__nav-btn" type="button" data-tab="#tab_1">
-                            Физическое лицо </button>
-                        <button class="tabs__nav-btn" type="button" data-tab="#tab_2">
-                            Юридическое лицо </button>
-                    </div>
-                    <form class="registration__form form_first">
-                        <input type="text" placeholder="ФИО*">
-                        <input type="email" placeholder="Email*">
-                        <input type="tel" placeholder="Телефон*">
-                    </form>
-
-                    <h2 class="registration__item">2. Адрес</h2>
-                    <form class="registration__form form_two">
-                        <div class="form__select">
-                            <select name="country">
-                                <option value="country_1">Страна</option>
-                                <option value="country_2">Украина</option>
-                            </select>
+        <div class="main">
+            <section class="bread-crumbs bread-crumbs_gray">
+                <div class="container">
+                    <div class="bread-crumbs__content">
+                        <a href="index.html" class="bread-crumbs__main">Главная</a>
+                        <div class="bread-crumbs__arr">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.00001 11L6.3 10.3L10.1 6.5H0V5.50002H10.1L6.3 1.7L7.00001 1.00002L12 6.00001L7.00001 11Z"
+                                    fill="white" />
+                            </svg>
                         </div>
-                        <div class="form__select">
-                            <select name="obl">
-                                <option value="obl_1">Область</option>
-                                <option value="obl_2">Киевская</option>
-                                <option value="obl_3">Львовская</option>
-                                <option value="obl_3">Сумская</option>
-                                <option value="obl_3">Харьковская</option>
-                            </select>
-                        </div>
-                        <input type="text" placeholder="Город*">
-                        <input type="text" placeholder="Адрес">
-                    </form>
-
-                    <h2 class="registration__item">3. Пароль</h2>
-                    <form class="registration__form form_third">
-                        <input type="password" placeholder="Новый пароль*">
-                        <input type="password" placeholder="Подтвердите новый пароль*">
-                    </form>
-
-                    <form class="registration__agry">
-                        <label for="agry" class="checkbox__label">
-                            <input type="checkbox" id="agry" class="checkbox">
-                            <span class="checkbox__costum"></span>
-                            Я согласен с <a href="#"> Условиями регистрации</a>
-                        </label>
-                    </form>
-
-                    <a href="#" class="registration__btn">Продолжить</a>
-                </div>
-
-                <div class="registration__colum registration__colum_right">
-                    <form id="upload-container" class="registration__form registration__form_upload">
-                        <input id="file-input" type="file" name="file" multiple>
-                        <label for="file-input">Загрузить фото</label>
-                    </form>
-                    <div class="tabs__content registration__tabs">
-                        <div class="tabs__item" id="tab_1">
-                            <label for="fiz-fop" class="checkbox__label">
-                                <input type="checkbox" id="fiz-fop" class="checkbox">
-                                <span class="checkbox__costum"></span>
-                                Являюсь ФОП</label>
-                        </div>
-                        <div class="tabs__item" id="tab_2">
-                            <div class="registration__radio-btn">
-                                <label for="ur" class="radio__label">
-                                    <input type="radio" id="ur" class="radio" name="category" data-radio="#radio-1">
-                                    <span class="radio__costum"></span>
-                                    Юр. лицо</label>
-                            </div>
-                            <div class="registration__radio-btn">
-                                <label for="company" class="radio__label">
-                                    <input type="radio" id="company" class="radio" name="category"
-                                        data-radio="#radio-2">
-                                    <span class="radio__costum"></span>
-                                    ФОП</label>
-                            </div>
-
-                            <div class="registration__ur radio__item" id="radio-1">
-                                <h2 class="registration__item">1. Реквизиты</h2>
-                                <form class="registration__form form_four">
-                                    <input type="text" placeholder="ОКПО">
-                                </form>
-
-                                <h2 class="registration__item">2. Юридический адрес</h2>
-                                <form class="registration__form form_two">
-                                    <div class="form__select">
-                                        <select name="country">
-                                            <option value="country_1">Страна</option>
-                                            <option value="country_2">Украина</option>
-                                        </select>
-                                    </div>
-                                    <div class="form__select">
-                                        <select name="obl">
-                                            <option value="obl_1">Область</option>
-                                            <option value="obl_2">Киевская</option>
-                                            <option value="obl_3">Львовская</option>
-                                            <option value="obl_3">Сумская</option>
-                                            <option value="obl_3">Харьковская</option>
-                                        </select>
-                                    </div>
-                                    <input type="text" placeholder="Город*">
-                                    <input type="text" placeholder="Адрес">
-                                    <input type="text" placeholder="Индекс">
-                                </form>
-                            </div>
-
-                            <div class="registration__fop radio__item" id="radio-2">
-                                <h2 class="registration__item">1. Реквизиты</h2>
-                                <form class="registration__form form_four">
-                                    <input type="text" placeholder="ЕДРПО">
-                                </form>
-
-                                <h2 class="registration__item">2. Юридический адрес</h2>
-                                <form class="registration__form form_two">
-                                    <div class="form__select">
-                                        <select name="country">
-                                            <option value="country_1">Страна</option>
-                                            <option value="country_2">Украина</option>
-                                        </select>
-                                    </div>
-                                    <div class="form__select">
-                                        <select name="obl">
-                                            <option value="obl_1">Область</option>
-                                            <option value="obl_2">Киевская</option>
-                                            <option value="obl_3">Львовская</option>
-                                            <option value="obl_3">Сумская</option>
-                                            <option value="obl_3">Харьковская</option>
-                                        </select>
-                                    </div>
-                                    <input type="text" placeholder="Город*">
-                                    <input type="text" placeholder="Адрес">
-                                </form>
-
-                            </div>
-                        </div>
+                        <a href="product-card.html" class="bread-crumbs__page">Регистрация</a>
                     </div>
                 </div>
-
-
-            </div>
+            </section>
+        
+            <section class="registration">
+                <div class="container">
+                    <h1 class="registration__title">Регистрация</h1>
+                    <div class="registration__content">
+                        <div class="registration__colum registration__colum_left">
+                            <h2 class="registration__item">1. Контактные данные</h2>
+                            <div class="tabs__nav registration__tabs">
+                                <button class="tabs__nav-btn" type="button" data-tab="#tab_1">
+                                    Физическое лицо </button>
+                                <button class="tabs__nav-btn" type="button" data-tab="#tab_2">
+                                    Юридическое лицо </button>
+                            </div>
+                            <form class="registration__form form_first">
+                                <input type="text" placeholder="ФИО*">
+                                <input type="email" placeholder="Email*">
+                                <input type="tel" placeholder="Телефон*">
+                            </form>
+        
+                            <h2 class="registration__item">2. Адрес</h2>
+                            <form class="registration__form form_two">
+                                <div class="form__select">
+                                    <select name="country">
+                                        <option value="country_1">Страна</option>
+                                        <option value="country_2">Украина</option>
+                                    </select>
+                                </div>
+                                <div class="form__select">
+                                    <select name="obl">
+                                        <option value="obl_1">Область</option>
+                                        <option value="obl_2">Киевская</option>
+                                        <option value="obl_3">Львовская</option>
+                                        <option value="obl_3">Сумская</option>
+                                        <option value="obl_3">Харьковская</option>
+                                    </select>
+                                </div>
+                                <input type="text" placeholder="Город*">
+                                <input type="text" placeholder="Адрес">
+                            </form>
+        
+                            <h2 class="registration__item">3. Пароль</h2>
+                            <form class="registration__form form_third">
+                                <input type="password" placeholder="Новый пароль*">
+                                <input type="password" placeholder="Подтвердите новый пароль*">
+                            </form>
+        
+                            <form class="registration__agry">
+                                <label for="agry" class="checkbox__label">
+                                    <input type="checkbox" id="agry" class="checkbox">
+                                    <span class="checkbox__costum"></span>
+                                    Я согласен с <a href="#"> Условиями регистрации</a>
+                                </label>
+                            </form>
+        
+                            <a href="#" class="registration__btn">Продолжить</a>
+                        </div>
+        
+                        <div class="registration__colum registration__colum_right">
+                            <form id="upload-container" class="registration__form registration__form_upload">
+                                <input id="file-input" type="file" name="file" multiple>
+                                <label for="file-input">Загрузить фото</label>
+                            </form>
+                            <div class="tabs__content registration__tabs">
+                                <div class="tabs__item" id="tab_1">
+                                    <label for="fiz-fop" class="checkbox__label">
+                                        <input type="checkbox" id="fiz-fop" class="checkbox">
+                                        <span class="checkbox__costum"></span>
+                                        Являюсь ФОП</label>
+                                </div>
+                                <div class="tabs__item" id="tab_2">
+                                    <div class="registration__radio-btn" data-radio="#radio-1">
+                                        <label for="ur" class="radio__label">
+                                            <input type="radio" id="ur" class="radio" name="category">
+                                            <span class="radio__costum"></span>
+                                            Юр. лицо</label>
+                                    </div>
+                                    <div class="registration__radio-btn" data-radio="#radio-2">
+                                        <label for="company" class="radio__label">
+                                            <input type="radio" id="company" class="radio" name="category">
+                                            <span class="radio__costum"></span>
+                                            ФОП</label>
+                                    </div>
+        
+                                    <div class="registration__ur radio__item" id="radio-1">
+                                        <h2 class="registration__item">1. Реквизиты</h2>
+                                        <form class="registration__form form_four">
+                                            <input type="text" placeholder="ОКПО">
+                                        </form>
+        
+                                        <h2 class="registration__item">2. Юридический адрес</h2>
+                                        <form class="registration__form form_two">
+                                            <div class="form__select">
+                                                <select name="country">
+                                                    <option value="country_1">Страна</option>
+                                                    <option value="country_2">Украина</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__select">
+                                                <select name="obl">
+                                                    <option value="obl_1">Область</option>
+                                                    <option value="obl_2">Киевская</option>
+                                                    <option value="obl_3">Львовская</option>
+                                                    <option value="obl_3">Сумская</option>
+                                                    <option value="obl_3">Харьковская</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" placeholder="Город*">
+                                            <input type="text" placeholder="Адрес">
+                                            <input type="text" placeholder="Индекс">
+                                        </form>
+                                    </div>
+        
+                                    <div class="registration__fop radio__item" id="radio-2">
+                                        <h2 class="registration__item">1. Реквизиты</h2>
+                                        <form class="registration__form form_four">
+                                            <input type="text" placeholder="ЕДРПО">
+                                        </form>
+        
+                                        <h2 class="registration__item">2. Юридический адрес</h2>
+                                        <form class="registration__form form_two">
+                                            <div class="form__select">
+                                                <select name="country">
+                                                    <option value="country_1">Страна</option>
+                                                    <option value="country_2">Украина</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__select">
+                                                <select name="obl">
+                                                    <option value="obl_1">Область</option>
+                                                    <option value="obl_2">Киевская</option>
+                                                    <option value="obl_3">Львовская</option>
+                                                    <option value="obl_3">Сумская</option>
+                                                    <option value="obl_3">Харьковская</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" placeholder="Город*">
+                                            <input type="text" placeholder="Адрес">
+                                        </form>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>        
         </div>
-    </section>
-    @@include('html/contacts.html')
 
-    @@include('html/footer.html')
+        @@include('html/contacts.html')
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        @@include('html/footer.html')    
+    </div>
+
     <script src="js/app.min.js"></script>
     <script src="js/tabs.js"></script>
 </body>

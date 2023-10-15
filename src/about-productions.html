@@ -6,104 +6,110 @@
 })
 
 <body>
-    @@include('html/header.html')
+    <div class="wrapper">
+        @@include('html/header.html')
+        <div class="main">
+            @@include('html/play-block.html',{
+            "page": "about-productions"
+            })
 
-    @@include('html/play-block.html',{
-    "page": "about-productions"
-    })
+            @@include('html/bread-crumbs.html',{
+            "link": "about-productions.html",
+            "page":"О производстве"
+            })
 
-    @@include('html/bread-crumbs.html',{
-    "link": "about-productions.html",
-    "page":"О производстве"
-    })
-
-    <section class="about-the-manufacturer">
-        <div class="container">
-            <div class="about-the-manufacturer__content">
-                <div class="about-the-manufacturer__block-first">
-                    <h2 class="about-the-manufacturer__title">
-                        О производителе
-                    </h2>
-                    <p class="about-the-manufacturer__about-info-first">
-                        <span>Сельскохозяйственный обслуживающий кооператив
-                            “Орех Причерноморья”</span> выращивает смешанные сады
-                        ореха грецкого с фундуком, а также ореха грецкого
-                        с шиповником, на площади более 150 гектаров.
-                    </p>
-                    <p class="about-the-manufacturer__about-info-two">
-                        Помимо этого кооператив занимается выращиванием
-                        посадочного материала, саженцов привитого и непривитого
-                        грецкого ореха, фундука и шиповника.
-                    </p>
-                    <p class="about-the-manufacturer__about-info-third">
-                        Предприятие укомплектовано всей необходимой техникой
-                        и оборудованием для выращивания интенсивного сада, воспроизводства саженцев в питомнике и
-                        выращивания трюфеля.
-                    </p>
-                </div>
-                @@include('html/about-the-manufacturer.html')
-            </div>
-        </div>
-    </section>
-    <section class="history">
-        <div class="container">
-            <div class="history__content">
-                <img src="@img/about-productions/pavel-taluba.jpg" class="history__image">
-                <div class="history__pavel-taluba">
-                    <h2 class="pavel-taluba__title">Павел Тулба</h2>
-                    <p class="pavel-taluba__about">Учередитель и владелец
-                        предприятия “Орех Причерноморья”</p>
-                    <div class="pavel-taluba__quote">
-                        <img src="img/about-productions/quotes.svg">
-                        <p>Главная наша цель – получить максимальную
-                            прибыль с одного гектара. </p>
+            <section class="about-the-manufacturer">
+                <div class="container">
+                    <div class="about-the-manufacturer__content">
+                        <div class="about-the-manufacturer__block-first">
+                            <h2 class="about-the-manufacturer__title">
+                                О производителе
+                            </h2>
+                            <p class="about-the-manufacturer__about-info-first">
+                                <span>Сельскохозяйственный обслуживающий кооператив
+                                    “Орех Причерноморья”</span> выращивает смешанные сады
+                                ореха грецкого с фундуком, а также ореха грецкого
+                                с шиповником, на площади более 150 гектаров.
+                            </p>
+                            <p class="about-the-manufacturer__about-info-two">
+                                Помимо этого кооператив занимается выращиванием
+                                посадочного материала, саженцов привитого и непривитого
+                                грецкого ореха, фундука и шиповника.
+                            </p>
+                            <p class="about-the-manufacturer__about-info-third">
+                                Предприятие укомплектовано всей необходимой техникой
+                                и оборудованием для выращивания интенсивного сада, воспроизводства саженцев в питомнике
+                                и
+                                выращивания трюфеля.
+                            </p>
+                        </div>
+                        @@include('html/about-the-manufacturer.html')
                     </div>
-                    <a href="#" class="pavel-taluba__btn pavel-taluba__btn_bkg-green">Написать нам</a>
                 </div>
-                <div class="history__history-of-productions">
-                    <h2>История предприятия</h2>
-                    <p class="history-of-productions__text">
-                        Наше предприятие основано в 2012 году
-                        для закладки смешанного сада грецкого ореха
-                        и фундука. </p>
-                    <p class="history-of-productions__text">
-                        На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои насаждения. Кроме
-                        выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
-                        выращиванием овец, а также являемся первой в Украине компанией, приступившей к промышленному
-                        выращиванию трюфелей на корнях фундука.
-                    </p>
-                    <p class="history-of-productions__text">
-                        Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
-                    </p>
+            </section>
+            <section class="history">
+                <div class="container">
+                    <div class="history__content">
+                        <img src="@img/about-productions/pavel-taluba.jpg" class="history__image">
+                        <div class="history__pavel-taluba">
+                            <h2 class="pavel-taluba__title">Павел Тулба</h2>
+                            <p class="pavel-taluba__about">Учередитель и владелец
+                                предприятия “Орех Причерноморья”</p>
+                            <div class="pavel-taluba__quote">
+                                <img src="img/about-productions/quotes.svg">
+                                <p>Главная наша цель – получить максимальную
+                                    прибыль с одного гектара. </p>
+                            </div>
+                            <a href="#" class="pavel-taluba__btn pavel-taluba__btn_bkg-green">Написать нам</a>
+                        </div>
+                        <div class="history__history-of-productions">
+                            <h2>История предприятия</h2>
+                            <p class="history-of-productions__text">
+                                Наше предприятие основано в 2012 году
+                                для закладки смешанного сада грецкого ореха
+                                и фундука. </p>
+                            <p class="history-of-productions__text">
+                                На сегодня мы уже заложили более 100 гектаров сада и продолжаем расширять свои
+                                насаждения. Кроме
+                                выращивания грецкого ореха и фундука, мы занимаемся выращиванием саженцев, разведением и
+                                выращиванием овец, а также являемся первой в Украине компанией, приступившей к
+                                промышленному
+                                выращиванию трюфелей на корнях фундука.
+                            </p>
+                            <p class="history-of-productions__text">
+                                Земля, которой пользуется кооператив, является собственностью членов нашего кооператива.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/statistics.html')
+
+            <div class="galery-first">
+                <div class="container">
+                    <div class="galery-first__content">
+                        <h2 class="galery__title">Галерея</h2>
+                        <p class="galery__text">Кадры социальной активности компании</p>
+
+                        @@include('html/galery.html')
+
+                        <a href="all-gallery.html" class="galery__btn">Смотреть всю галерею</a>
+                    </div>
                 </div>
             </div>
+
+            @@include('html/eco.html',{
+            "page": "about-productions"
+            })
+
+            @@include('html/news.html')
+
         </div>
-    </section>
+        @@include('html/contacts.html')
 
-    @@include('html/statistics.html')
-
-    <div class="galery-first">
-        <div class="container">
-            <div class="galery-first__content">
-                <h2 class="galery__title">Галерея</h2>
-                <p class="galery__text">Кадры социальной активности компании</p>
-
-                @@include('html/galery.html')
-
-                <a href="all-gallery.html" class="galery__btn">Смотреть всю галерею</a>
-            </div>
-        </div>
+        @@include('html/footer.html')
     </div>
-
-    @@include('html/eco.html',{
-    "page": "about-productions"
-    })
-
-    @@include('html/news.html')
-
-    @@include('html/contacts.html')
-
-    @@include('html/footer.html')
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>
