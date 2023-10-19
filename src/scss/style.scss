@@ -832,6 +832,10 @@ ul {
             opacity: 0;
             visibility: hidden;
             transition: .55s opacity, .55s visibility;
+
+            a{
+                padding-left: 30px;
+            }
         }
 
         &:hover {
