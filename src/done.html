@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title": "Заказ оформлен"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html')
+
+        <div class="main">
+            <section class="done">
+                <div class="container">
+                    <div class="done__content">
+                        <h1>Благодарим Вас за заказ!</h1>
+                        <p>Наши менеджеры свяжутся с Вами 
+                            в ближайшее время</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        @@include('html/contacts.html')
+
+        @@include('html/footer.html')
+    </div>
+
+    <script src="js/app.min.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/radio.js"></script>
+</body>
+
+</html>

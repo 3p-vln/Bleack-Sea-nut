@@ -87,3 +87,66 @@ if (zoom && zoomBtn) {
     });
 }
 
+let basket = document.querySelector(".second-line__basket");
+let basketBtn = document.querySelector(".second-line__basket img");
+
+basketBtn.addEventListener("click", function () {
+    basket.classList.toggle('active');
+});
+
+const numMinus = document.querySelectorAll(".arr-left")
+    , numPlus = document.querySelectorAll(".arr-right")
+    , num = document.querySelectorAll(".num__bar");
+let b = [];
+function el() {
+    num.forEach(((e, t) => {
+        e.textContent = b[t]
+    }
+    ))
+}
+num.forEach(((e, t) => {
+    b[t] = 0,
+        e.textContent = b[t]
+}
+)),
+    numMinus.forEach(((e, t) => {
+        e.addEventListener("click", (() => {
+            b[t]--,
+                el()
+        }
+        ))
+    }
+    )),
+    numPlus.forEach(((e, t) => {
+        e.addEventListener("click", (() => {
+            b[t]++,
+                el()
+        }
+        ))
+    }
+    ));
+
+// let add = document.querySelectorAll(".arr-right");
+// let subract = document.querySelectorAll(".arr-left");
+// let output = document.querySelectorAll(".num__bar");
+
+// add.addEventListener("click", function () {
+//   let result = Number(output.innerText) + 1;
+
+//   if (result > 100) {
+//     result = 0;
+//   }
+
+//   output.innerText = result;
+// });
+
+// subract.addEventListener("click", function () {
+//   let output = document.querySelector(".num__bar");
+//   let result = Number(output.innerText) - 1;
+
+//   if (result < 0) {
+//     result = 0;
+//   }
+
+//   output.innerText = result;
+// });
