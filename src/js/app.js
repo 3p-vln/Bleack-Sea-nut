@@ -2,7 +2,6 @@ import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.testWebP();
 
-
 let menuBtn = document.querySelector('.burger-menu__button');
 let menu = document.querySelector('.burger-menu__content');
 menuBtn.addEventListener('click', function () {
@@ -14,8 +13,11 @@ if (document.querySelector('.video-cover')) {
     var video = document.querySelectorAll('.video-cover');
 
     video.forEach(b => b.addEventListener('click', function () {
-        b.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-        );
+        if (!b.classList.contains('active')){
+            b.classList.toggle('active');
+            b.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            );    
+        }
     }));
 
 }
@@ -125,8 +127,6 @@ num.forEach(((e, t) => {
         ))
     }
     ));
-
-// let add = document.querySelectorAll(".arr-right");
 // let subract = document.querySelectorAll(".arr-left");
 // let output = document.querySelectorAll(".num__bar");
 
