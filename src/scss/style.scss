@@ -3847,7 +3847,7 @@ ul {
             align-items: center;
             margin: 0 auto;
 
-            &:hover{
+            &:hover {
                 color: #337D5A;
                 background-color: white;
             }
@@ -4166,12 +4166,13 @@ ul {
             &::before {
                 content: '';
                 background-color: #337d5a;
-                width: 6px;
-                height: 6px;
+                width: 8px;
+                height: 8px;
                 border-radius: 50%;
                 position: absolute;
-                margin-top: 3px;
-                margin-left: 3px;
+                top: 50%;
+                left: 50%;
+                transform: traslate3d(-50%, -50%, 0);
                 opacity: 0;
                 transition: 0.2s ease-in;
             }
