@@ -61,11 +61,23 @@
                 <div class="first-line__login-and-registration">
                     <a href="entry.html" class="first-line__login"><img src="img/man-user.svg" loading="lazy"> Вход</a>
                     <a href="registration.html" class="first-line__registration">Регистрация</a>
-                    <select name="language" class="first-line__language">
-                        <option value="language_1">Ru</option>
-                        <option value="language_2">Ua</option>
-                        <option value="language_3">En</option>
-                    </select>
+                    <div class="first-line__language">
+                        <div class="select__content">
+                            <a class="select__btn">
+                                <p class="select__btn_p select__btn_p--active">Ru</p>
+                                <img src="img/downwards-arrow-key.svg"
+                                    class="select__btn_after">
+                            </a>
+                            <ul class="select__list">
+                                <li class="select__list-item" data-select="kyiv">En</li>
+                                <li class="select__list-item" data-select="lviv">Ua</li>
+                                <li class="select__list-item" data-select="sumy">Ru</li>
+                                </li>
+                            </ul>
+                            <input type="text" name="select-category" value=""
+                                class="select__input-hidden">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -607,19 +619,35 @@
                                 <div class="radio__item" id="radio-1">
                                     <form>
                                         <div class="form__select">
-                                            <select name="country">
-                                                <option value="country_1">Страна</option>
-                                                <option value="country_2">Украина</option>
-                                            </select>
-                                        </div>
+                                            <div class="select__content">
+                                                <a class="select__btn">
+                                                    <p class="select__btn_p select__btn_p--active">Страна</p> 
+                                                    <img src="img/downwards-arrow-key.svg" class="select__btn_after">
+                                                </a>                                                    <ul class="select__list">
+                                                    <li class="select__list-item" data-select="ua">Украина</li>
+                                                    <li class="select__list-item" data-select="bg">Болгария</li>
+                                                    <li class="select__list-item" data-select="md">Молдова</li>
+                                                </ul>
+                                                <input type="text" name="select-category" value=""
+                                                    class="select__input-hidden">
+                                            </div>                                        </div>
                                         <div class="form__select">
-                                            <select name="obl">
-                                                <option value="obl_1">Область</option>
-                                                <option value="obl_2">Киевская</option>
-                                                <option value="obl_3">Львовская</option>
-                                                <option value="obl_3">Сумская</option>
-                                                <option value="obl_3">Харьковская</option>
-                                            </select>
+                                            <div class="select__content">
+                                                <a class="select__btn">
+                                                    <p class="select__btn_p select__btn_p--active">Область</p>
+                                                    <img src="img/downwards-arrow-key.svg"
+                                                        class="select__btn_after">
+                                                </a>
+                                                <ul class="select__list">
+                                                    <li class="select__list-item" data-select="kyiv">Киевская</li>
+                                                    <li class="select__list-item" data-select="lviv">Львовская</li>
+                                                    <li class="select__list-item" data-select="sumy">Сумская</li>
+                                                    <li class="select__list-item" data-select="kharkov">Харьковская
+                                                    </li>
+                                                </ul>
+                                                <input type="text" name="select-category" value=""
+                                                    class="select__input-hidden">
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
