@@ -3,45 +3,45 @@ import * as flsFunctions from "./modules/functions.js";
 flsFunctions.testWebP();
 
 document.querySelectorAll('.select__content').forEach(function (dropDownWrapper) {
-	const dropDownBtn = dropDownWrapper.querySelector('.select__btn');
+    const dropDownBtn = dropDownWrapper.querySelector('.select__btn');
     const dropDownTitle = dropDownWrapper.querySelector('.select__btn_p');
     const dropDownAfter = dropDownWrapper.querySelector('.select__btn_after');
-	const dropDownList = dropDownWrapper.querySelector('.select__list');
-	const dropDownListItems = dropDownList.querySelectorAll('.select__list-item');
-	const dropDownInput = dropDownWrapper.querySelector('.select__input-hidden');
+    const dropDownList = dropDownWrapper.querySelector('.select__list');
+    const dropDownListItems = dropDownList.querySelectorAll('.select__list-item');
+    const dropDownInput = dropDownWrapper.querySelector('.select__input-hidden');
 
-	dropDownBtn.addEventListener('click', function (e) {
-		dropDownList.classList.toggle('select__list--visible');
+    dropDownBtn.addEventListener('click', function (e) {
+        dropDownList.classList.toggle('select__list--visible');
         dropDownAfter.classList.toggle('select__btn_after--active')
         this.classList.add('select__button--active');
-	});
+    });
 
-	dropDownListItems.forEach(function (listItem) {
-		listItem.addEventListener('click', function (e) {
-			e.stopPropagation();
-			dropDownTitle.innerText = this.innerText;
-			dropDownBtn.focus();
-			dropDownInput.value = this.dataset.value;
+    dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener('click', function (e) {
+            e.stopPropagation();
+            dropDownTitle.innerText = this.innerText;
+            dropDownBtn.focus();
+            dropDownInput.value = this.dataset.value;
             dropDownAfter.classList.remove('select__btn_after--active');
-			dropDownList.classList.remove('select__list--visible');
-		});
-	});
+            dropDownList.classList.remove('select__list--visible');
+        });
+    });
 
-	document.addEventListener('click', function (e) {
-		if (e.target !== dropDownBtn) {
-			dropDownBtn.classList.remove('select__btn--active');
+    document.addEventListener('click', function (e) {
+        if (e.target !== dropDownBtn) {
+            dropDownBtn.classList.remove('select__btn--active');
             dropDownAfter.classList.remove('select__btn_after--active');
-			dropDownList.classList.remove('select__list--visible');
-		}
-	});
+            dropDownList.classList.remove('select__list--visible');
+        }
+    });
 
-	document.addEventListener('keydown', function (e) {
-		if (e.key === 'Tab' || e.key === 'Escape') {
-			dropDownBtn.classList.remove('select__btn--active');
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Tab' || e.key === 'Escape') {
+            dropDownBtn.classList.remove('select__btn--active');
             dropDownAfter.classList.remove('select__btn_after--active');
-			dropDownList.classList.remove('select__list--visible');
-		}
-	});
+            dropDownList.classList.remove('select__list--visible');
+        }
+    });
 });
 
 
@@ -60,6 +60,7 @@ if (document.querySelector('.video-cover')) {
             b.classList.toggle('active');
             b.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
             );
+            console.log('sdfg');
         }
     }));
 
@@ -87,15 +88,11 @@ if (document.querySelector('.block-two__swiper')) {
     });
 
     swiper.on('slideChange', function () {
-        // function controlVideo(vidFunc) {
-        //     var iframe = document.getElementsByTagName("iframe")[0].contentWindow;
-        //     iframe.postMessage(
-        //         '{"event":"command","func":"' + vidFunc + '","args":""}',
-        //         "*"
-        //     );
-        // };
-
-        // controlVideo('stopVideo');
+        document.getElementsByTagName('iframe')[0].remove();
+        const video = document.querySelector('.about-the-manufacturer__block-two .video-cover');
+        if(video.classList.contains('active')){
+            video.classList.remove('active');
+        }
     });
 }
 
