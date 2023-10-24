@@ -33,7 +33,16 @@
                                     <img src="@img/settings.svg">
                                 </div>
                                 <div class="settings__taste">
-                                    <select name="taste">
+                                    <div class="select__content">
+                                        <a class="select__btn">Страна</a>
+                                        <ul class="select__list">
+                                            <li class="select__list-item" data-select="ua">Украина</li>
+                                            <li class="select__list-item" data-select="bg">Болгария</li>
+                                            <li class="select__list-item" data-select="md">Молдова</li>
+                                        </ul>    
+                                        <input type="text" name="select-category" value="" class="select__input-hidden" >
+                                    </div>
+                                    <select name="taste" class="select">
                                         <option value="taste_0">Вкус</option>
                                         <option value="taste_1">Грецкий орех</option>
                                         <option value="taste_2">Фундук</option>
@@ -41,7 +50,7 @@
                                     </select>
                                 </div>
                                 <div class="settings__mass">
-                                    <select name="mass">
+                                    <select name="mass" class="select">
                                         <option value="mass_0">Масса</option>
                                         <option value="mass_1">30 г.</option>
                                         <option value="mass_2">40 г.</option>

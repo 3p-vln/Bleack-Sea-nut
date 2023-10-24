@@ -62,11 +62,23 @@
                 <div class="first-line__login-and-registration">
                     <a href="entry.html" class="first-line__login"><img src="img/man-user.svg" loading="lazy"> Вход</a>
                     <a href="registration.html" class="first-line__registration">Регистрация</a>
-                    <select name="language" class="first-line__language">
-                        <option value="language_1">Ru</option>
-                        <option value="language_2">Ua</option>
-                        <option value="language_3">En</option>
-                    </select>
+                    <div class="first-line__language">
+                        <div class="select__content">
+                            <a class="select__btn">
+                                <p class="select__btn_p select__btn_p--active">Ru</p>
+                                <img src="img/downwards-arrow-key.svg"
+                                    class="select__btn_after">
+                            </a>
+                            <ul class="select__list">
+                                <li class="select__list-item" data-select="kyiv">En</li>
+                                <li class="select__list-item" data-select="lviv">Ua</li>
+                                <li class="select__list-item" data-select="sumy">Ru</li>
+                                </li>
+                            </ul>
+                            <input type="text" name="select-category" value=""
+                                class="select__input-hidden">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -360,7 +372,16 @@
                                     <img src="img/settings.svg">
                                 </div>
                                 <div class="settings__taste">
-                                    <select name="taste">
+                                    <div class="select__content">
+                                        <a class="select__btn">Страна</a>
+                                        <ul class="select__list">
+                                            <li class="select__list-item" data-select="ua">Украина</li>
+                                            <li class="select__list-item" data-select="bg">Болгария</li>
+                                            <li class="select__list-item" data-select="md">Молдова</li>
+                                        </ul>    
+                                        <input type="text" name="select-category" value="" class="select__input-hidden" >
+                                    </div>
+                                    <select name="taste" class="select">
                                         <option value="taste_0">Вкус</option>
                                         <option value="taste_1">Грецкий орех</option>
                                         <option value="taste_2">Фундук</option>
@@ -368,7 +389,7 @@
                                     </select>
                                 </div>
                                 <div class="settings__mass">
-                                    <select name="mass">
+                                    <select name="mass" class="select">
                                         <option value="mass_0">Масса</option>
                                         <option value="mass_1">30 г.</option>
                                         <option value="mass_2">40 г.</option>

@@ -2,6 +2,49 @@ import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.testWebP();
 
+document.querySelectorAll('.select__content').forEach(function (dropDownWrapper) {
+	const dropDownBtn = dropDownWrapper.querySelector('.select__btn');
+    const dropDownTitle = dropDownWrapper.querySelector('.select__btn_p');
+    const dropDownAfter = dropDownWrapper.querySelector('.select__btn_after');
+	const dropDownList = dropDownWrapper.querySelector('.select__list');
+	const dropDownListItems = dropDownList.querySelectorAll('.select__list-item');
+	const dropDownInput = dropDownWrapper.querySelector('.select__input-hidden');
+
+	dropDownBtn.addEventListener('click', function (e) {
+		dropDownList.classList.toggle('select__list--visible');
+        dropDownAfter.classList.toggle('select__btn_after--active')
+        this.classList.add('select__button--active');
+	});
+
+	dropDownListItems.forEach(function (listItem) {
+		listItem.addEventListener('click', function (e) {
+			e.stopPropagation();
+			dropDownTitle.innerText = this.innerText;
+			dropDownBtn.focus();
+			dropDownInput.value = this.dataset.value;
+            dropDownAfter.classList.remove('select__btn_after--active');
+			dropDownList.classList.remove('select__list--visible');
+		});
+	});
+
+	document.addEventListener('click', function (e) {
+		if (e.target !== dropDownBtn) {
+			dropDownBtn.classList.remove('select__btn--active');
+            dropDownAfter.classList.remove('select__btn_after--active');
+			dropDownList.classList.remove('select__list--visible');
+		}
+	});
+
+	document.addEventListener('keydown', function (e) {
+		if (e.key === 'Tab' || e.key === 'Escape') {
+			dropDownBtn.classList.remove('select__btn--active');
+            dropDownAfter.classList.remove('select__btn_after--active');
+			dropDownList.classList.remove('select__list--visible');
+		}
+	});
+});
+
+
 let menuBtn = document.querySelector('.burger-menu__button');
 let menu = document.querySelector('.burger-menu__content');
 menuBtn.addEventListener('click', function () {
@@ -13,10 +56,10 @@ if (document.querySelector('.video-cover')) {
     var video = document.querySelectorAll('.video-cover');
 
     video.forEach(b => b.addEventListener('click', function () {
-        if (!b.classList.contains('active')){
+        if (!b.classList.contains('active')) {
             b.classList.toggle('active');
             b.insertAdjacentHTML("afterbegin", '<iframe src="https://www.youtube.com/embed/hT4O8VI__XE?si=oyVRl9Byye2mLfrt?feature=oembed&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-            );    
+            );
         }
     }));
 
@@ -34,13 +77,25 @@ if (document.querySelector('.product-swiper')) {
 }
 
 if (document.querySelector('.block-two__swiper')) {
-    new Swiper(".block-two__swiper", {
+    const swiper = new Swiper(".block-two__swiper", {
         spaceBetween: 0,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
         keyboard: true,
+    });
+
+    swiper.on('slideChange', function () {
+        // function controlVideo(vidFunc) {
+        //     var iframe = document.getElementsByTagName("iframe")[0].contentWindow;
+        //     iframe.postMessage(
+        //         '{"event":"command","func":"' + vidFunc + '","args":""}',
+        //         "*"
+        //     );
+        // };
+
+        // controlVideo('stopVideo');
     });
 }
 
@@ -127,26 +182,3 @@ num.forEach(((e, t) => {
         ))
     }
     ));
-// let subract = document.querySelectorAll(".arr-left");
-// let output = document.querySelectorAll(".num__bar");
-
-// add.addEventListener("click", function () {
-//   let result = Number(output.innerText) + 1;
-
-//   if (result > 100) {
-//     result = 0;
-//   }
-
-//   output.innerText = result;
-// });
-
-// subract.addEventListener("click", function () {
-//   let output = document.querySelector(".num__bar");
-//   let result = Number(output.innerText) - 1;
-
-//   if (result < 0) {
-//     result = 0;
-//   }
-
-//   output.innerText = result;
-// });
