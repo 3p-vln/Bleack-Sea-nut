@@ -197,6 +197,7 @@ ul {
 
                     &--active {
                         display: block;
+                        pointer-events: none;
                     }
                 }
 
